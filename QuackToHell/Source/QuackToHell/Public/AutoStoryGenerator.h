@@ -12,9 +12,6 @@ class QUACKTOHELL_API AAutoStoryGenerator : public AActor
 {
 	GENERATED_BODY()
 	
-public:	
-	// Sets default values for this actor's properties
-	AAutoStoryGenerator();
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,7 +20,12 @@ protected:
 public:	
 	//DefendantStoryService에 대한 참조
 	UPROPERTY()
-	UDefendantStoryService* StoryService;
+	TObjectPtr<UDefendantStoryService> StoryService;
+	// Sets default values for this actor's properties
+	AAutoStoryGenerator();
+
+	// 텍스트 파일에서 문자열을 읽어오는 함수
+	void ReadInputFromFile();
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

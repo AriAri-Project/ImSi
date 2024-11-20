@@ -3,13 +3,66 @@
 
 #include "DefendantStoryService.h"
 #include "FuncLib/JsonFuncLib.h"
+#include "FuncLib/OpenAIFuncLib.h"
+#include "Engine/Engine.h"
+#include "ChatGPT/ChatGPT.h"
+
 #include "Logging/StructuredLog.h"
 
 //초기화 함수
 bool UDefendantStoryService::Init(const OpenAI::ServiceSecrets& Secrets)
 {
 	UE_LOG(LogTemp, Display, TEXT("UDefendantStoryService Init"));
+	
+	//인증 절차
+	const auto Auth = UOpenAIFuncLib::LoadAPITokensFromFile(FPaths::ProjectDir().Append("OpenAIAuth.ini"));
+	ChatGPT = NewObject<UChatGPT>();
+	//객체생성에 문제가 있으면 강종
+	check(ChatGPT);
+	ChatGPT->SetAuth(Auth);
+	ChatGPT->SetModel(TEXT("gpt-4"));
+	ChatGPT->SetMaxTokens(MaxTokens);
+
+	//요청이 성공적으로 처리되었을 때 어떤 함수를 불러올 것인지. (콜백등록). ChatGPT객체의 해당 함수를 부를 때 다음 함수도 같이 부르라는 뜻이다.
+	ChatGPT->OnRequestCompleted().AddUObject(this, &ThisClass::OnRequestCompleted);
+	//요청이 업데이트(처리) 중일 때 어떤 함수를 불러올 것인지. (콜백등록)
+	ChatGPT->OnRequestUpdated().AddUObject(this, &ThisClass::OnRequestUpdated);
+
 	return true;
+}
+
+//gpt에게 요청을 보낸다.
+void UDefendantStoryService::OnSendMessage(const FString& Input) {
+		
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Yellow, TEXT("Processing your input..."));
+	}
+
+	// OpenAI에 보낼 메시지 생성
+	FMessage Message;
+	Message.Role = UOpenAIFuncLib::OpenAIRoleToString(ERole::User); //role이 user면 요청을 보낸다는 뜻임.
+	Message.Content = Input;
+	ChatGPT->AddMessage(Message);
+
+	// OpenAI 요청 실행
+	ChatGPT->MakeRequest();
+
+	UE_LOG(LogTemp, Display, TEXT("Message sent to OpenAI: %s"), *Input);
+}
+
+
+
+
+void UDefendantStoryService::OnRequestCompleted()
+{
+	UE_LOG(LogTemp, Display, TEXT("요청이 성공적으로 완료되었습니다."));
+}
+
+
+void UDefendantStoryService::OnRequestUpdated(const FMessage& Message, bool WasError)
+{
+	UE_LOG(LogTemp, Display, TEXT("요청을 처리중입니다."));
 }
 
 //해당 서비스에 대한 간략 설명
@@ -54,7 +107,6 @@ void UDefendantStoryService::Call(const TSharedPtr<FJsonObject>& Args, const FSt
 	
 	//OpenAI에게 프롬프트를 전달함&응답 받아옴. 
 	ServiceDataRecieved.Broadcast(MakeMessage(Prompt));
-
 }
 
 //서비스 이름 반환

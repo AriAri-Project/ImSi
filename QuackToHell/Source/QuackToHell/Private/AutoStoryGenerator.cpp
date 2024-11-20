@@ -2,7 +2,8 @@
 
 
 #include "AutoStoryGenerator.h"
-
+#include "Misc/FileHelper.h" // 텍스트 파일 읽기용
+#include "Misc/Paths.h" // 파일 경로 관련
 
 // Sets default values
 AAutoStoryGenerator::AAutoStoryGenerator()
@@ -10,43 +11,74 @@ AAutoStoryGenerator::AAutoStoryGenerator()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	//StoryService 초기화
-	StoryService = nullptr;
+	// DefendantStoryService 객체 생성 및 초기화
+	StoryService = NewObject<UDefendantStoryService>();
+	if (StoryService)
+	{
+		StoryService->Init(OpenAI::ServiceSecrets()); // 필요한 Secret 정보 전달
+		UE_LOG(LogTemp, Display, TEXT("Defendant Story Service initialized."));
+	}
 
 }
+
+
 
 // Called when the game starts or when spawned
 void AAutoStoryGenerator::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Display, TEXT("BeginPlay Called"));
-
-	//DefendantStoryService 인스턴스 생성
-	//NewObject: UObject를 생성하기 위해 사용. 
-	StoryService = NewObject<UDefendantStoryService>(this);
-
-	if (StoryService) {
-		UE_LOG(LogTemp, Display, TEXT("Defendant Story Service initialized."));
-
-		//서비스 초기화
-		OpenAI::ServiceSecrets Secrets; 
-		StoryService->Init(Secrets);
-		
-		//JSON인자 생성
-		TSharedPtr<FJsonObject> Args = MakeShareable(new FJsonObject());
-		Args->SetStringField("name", "짱구");
-
-		//서비스 호출
-		StoryService->Call(Args, TEXT("TestToolID"));
-
-		//호출 확인 로그
-		UE_LOG(LogTemp, Display, TEXT("DefendantStoryService::Call invoked"));
-	}
-	else {
-		UE_LOG(LogTemp, Error, TEXT("Failed to create Defendant story service"));
+	// StoryService 초기화
+	if (!StoryService)
+	{
+		StoryService = NewObject<UDefendantStoryService>(this); // Outer를 명시적으로 설정
+		if (StoryService)
+		{
+			if (StoryService->Init(OpenAI::ServiceSecrets()))
+			{
+				UE_LOG(LogTemp, Display, TEXT("Defendant Story Service initialized in BeginPlay."));
+			}
+			else
+			{
+				UE_LOG(LogTemp, Error, TEXT("Defendant Story Service Init failed."));
+			}
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Failed to create Defendant Story Service in BeginPlay."));
+		}
 	}
 
+	// 텍스트 파일에서 입력 읽기
+	ReadInputFromFile();
 
 }
+
+
+void AAutoStoryGenerator::ReadInputFromFile()
+{
+	FString FilePath = FPaths::ProjectContentDir() + TEXT("InputText.txt");
+	FString FileContent;
+
+	if (FFileHelper::LoadFileToString(FileContent, *FilePath))
+	{
+		UE_LOG(LogTemp, Display, TEXT("File Content: %s"), *FileContent);
+
+		if (StoryService)
+		{
+			StoryService->OnSendMessage(FileContent);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("StoryService is nullptr."));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Failed to load file from path: %s"), *FilePath);
+	}
+
+}
+
 
 // Called every frame
 void AAutoStoryGenerator::Tick(float DeltaTime)

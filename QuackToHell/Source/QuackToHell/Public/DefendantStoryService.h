@@ -3,8 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
 #include "UObject/NoExportTypes.h"
 #include "ChatGPT/BaseService.h"
+#include "ChatGPT/ChatGPT.h"
 #include "FuncLib/OpenAIFuncLib.h"
 #include "DefendantStoryService.generated.h"
 
@@ -19,6 +21,13 @@ class QUACKTOHELL_API UDefendantStoryService : public UBaseService
 public:
     virtual bool Init(const OpenAI::ServiceSecrets& Secrets);
 
+    void OnSendMessage(const FString& Input);
+
+
+    void OnRequestCompleted();
+
+    void OnRequestUpdated(const FMessage& Message, bool WasError);
+
     virtual FString Description() const;
     virtual FString FunctionName() const;
     virtual void Call(const TSharedPtr<FJsonObject>& Args, const FString& InToolID);
@@ -28,5 +37,7 @@ public:
 
 protected:
     virtual FString MakeFunction() const;
-	
+    UPROPERTY()
+    TObjectPtr<UChatGPT> ChatGPT;
+    int32 MaxTokens = 2000 ;
 };
