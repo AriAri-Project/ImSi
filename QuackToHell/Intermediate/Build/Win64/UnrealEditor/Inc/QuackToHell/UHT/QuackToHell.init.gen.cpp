@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeQuackToHell_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xF78FFFF2,
-				0x98EDE084,
+				0x142AB368,
+				0xC9A797D5,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_QuackToHell.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_QuackToHell.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_QuackToHell(Z_Construct_UPackage__Script_QuackToHell, TEXT("/Script/QuackToHell"), Z_Registration_Info_UPackage__Script_QuackToHell, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xF78FFFF2, 0x98EDE084));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_QuackToHell(Z_Construct_UPackage__Script_QuackToHell, TEXT("/Script/QuackToHell"), Z_Registration_Info_UPackage__Script_QuackToHell, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x142AB368, 0xC9A797D5));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

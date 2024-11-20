@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "ChatGPT/BaseService.h"
+#include "FuncLib/OpenAIFuncLib.h"
 #include "DefendantStoryService.generated.h"
 
 /**
@@ -13,13 +14,14 @@
 UCLASS()
 class QUACKTOHELL_API UDefendantStoryService : public UBaseService
 {
+    //GENERATED_BODY() 매크로가 클래스의 기본 생성자와 필수 메타데이터를 자동으로 생성
 	GENERATED_BODY()
 public:
     virtual bool Init(const OpenAI::ServiceSecrets& Secrets);
 
     virtual FString Description() const;
     virtual FString FunctionName() const;
-    virtual void Call(const TSharedPtr<FJsonObject>& Args, const FString& ToolID);
+    virtual void Call(const TSharedPtr<FJsonObject>& Args, const FString& InToolID);
 
     virtual FString Name() const;
     virtual FString TooltipDescription() const;

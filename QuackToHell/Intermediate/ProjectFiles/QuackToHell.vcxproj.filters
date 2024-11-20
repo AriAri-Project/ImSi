@@ -822,12 +822,18 @@
     <Filter Include="Source\QuackToHell\Private">
       <UniqueIdentifier>{3C93E03C-2089-3134-8BDA-82D8345C269F}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\QuackToHell\Private\AutoStoryGenerator.cpp">
+      <Filter>Source\QuackToHell\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\QuackToHell\Private\DefendantStoryService.cpp">
       <Filter>Source\QuackToHell\Private</Filter>
     </ClCompile>
     <Filter Include="Source\QuackToHell\Public">
       <UniqueIdentifier>{795174C0-2851-3D02-B997-0FFBC6C132CC}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\QuackToHell\Public\AutoStoryGenerator.h">
+      <Filter>Source\QuackToHell\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\QuackToHell\Public\DefendantStoryService.h">
       <Filter>Source\QuackToHell\Public</Filter>
     </ClInclude>
