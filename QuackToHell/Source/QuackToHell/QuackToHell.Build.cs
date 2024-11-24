@@ -8,7 +8,7 @@ public class QuackToHell : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        // ÇÊ¿äÇÑ ¸ðµâ Ãß°¡: OpenAI, Json, JsonUtilities 
+        // í•„ìš”í•œ ëª¨ë“ˆ ì¶”ê°€: OpenAI, Json, JsonUtilities 
         PublicDependencyModuleNames.AddRange(
             new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "OpenAI", "Json", "JsonUtilities" }
         );

@@ -15,6 +15,7 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
     <None Include="..\..\OpenAIAuth.ini" />
+    <None Include="..\..\PromptToGod.txt" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -828,7 +829,7 @@
     <ClCompile Include="..\..\Source\QuackToHell\Private\DefendantStoryService.cpp">
       <Filter>Source\QuackToHell\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\QuackToHell\Private\MyGameInstance_TEST.cpp">
+    <ClCompile Include="..\..\Source\QuackToHell\Private\Util.cpp">
       <Filter>Source\QuackToHell\Private</Filter>
     </ClCompile>
     <Filter Include="Source\QuackToHell\Public">
@@ -840,8 +841,9 @@
     <ClInclude Include="..\..\Source\QuackToHell\Public\DefendantStoryService.h">
       <Filter>Source\QuackToHell\Public</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\QuackToHell\Public\MyGameInstance_TEST.h">
+    <ClInclude Include="..\..\Source\QuackToHell\Public\Util.h">
       <Filter>Source\QuackToHell\Public</Filter>
     </ClInclude>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
