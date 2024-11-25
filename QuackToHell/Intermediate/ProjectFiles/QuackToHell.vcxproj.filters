@@ -475,6 +475,18 @@
     <ClCompile Include="..\..\Plugins\OpenAI\Source\OpenAI\Private\Sample\APIOverview.cpp">
       <Filter>Plugins\OpenAI\Source\OpenAI\Private\Sample</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Plugins\OpenAI\Source\OpenAI\Private\Sample\MyGodCalls.cpp">
+      <Filter>Plugins\OpenAI\Source\OpenAI\Private\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\OpenAI\Source\OpenAI\Private\Sample\MyGodFunctions.cpp">
+      <Filter>Plugins\OpenAI\Source\OpenAI\Private\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\OpenAI\Source\OpenAI\Private\Sample\MyOpenAICalls.cpp">
+      <Filter>Plugins\OpenAI\Source\OpenAI\Private\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\OpenAI\Source\OpenAI\Private\Sample\MyOpenAIFunctions.cpp">
+      <Filter>Plugins\OpenAI\Source\OpenAI\Private\Sample</Filter>
+    </ClCompile>
     <Filter Include="Plugins\OpenAI\Source\OpenAI\Private\Sample\Services">
       <UniqueIdentifier>{F1F0A1B2-5E73-37A9-83AC-12FD37E6AEA8}</UniqueIdentifier>
     </Filter>
@@ -790,6 +802,18 @@
     <ClInclude Include="..\..\Plugins\OpenAI\Source\OpenAI\Public\Sample\APIOverview.h">
       <Filter>Plugins\OpenAI\Source\OpenAI\Public\Sample</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Plugins\OpenAI\Source\OpenAI\Public\Sample\MyGodCalls.h">
+      <Filter>Plugins\OpenAI\Source\OpenAI\Public\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\OpenAI\Source\OpenAI\Public\Sample\MyGodFunctions.h">
+      <Filter>Plugins\OpenAI\Source\OpenAI\Public\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\OpenAI\Source\OpenAI\Public\Sample\MyOpenAICalls.h">
+      <Filter>Plugins\OpenAI\Source\OpenAI\Public\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\OpenAI\Source\OpenAI\Public\Sample\MyOpenAIFunctions.h">
+      <Filter>Plugins\OpenAI\Source\OpenAI\Public\Sample</Filter>
+    </ClInclude>
     <Filter Include="Plugins\OpenAI\Source\OpenAI\Public\Sample\Services">
       <UniqueIdentifier>{968332F3-8403-35C3-8BEA-1073D5CDF536}</UniqueIdentifier>
     </Filter>
@@ -844,6 +868,5 @@
     <ClInclude Include="..\..\Source\QuackToHell\Public\Util.h">
       <Filter>Source\QuackToHell\Public</Filter>
     </ClInclude>
-    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
