@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuackToHellModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4342ffbb37dd38d23276c014cb06e55b171ae713")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+040bacecf044dd601887ceb50d902a1cc83e0b19")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuackToHellModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuackToHellModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

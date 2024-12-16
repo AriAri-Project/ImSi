@@ -1,12 +1,12 @@
 {
 	"role": "jury",
-	"name": "Michael Brown",
-	"personality": "forage",
-	"speech_style": "HmmHmm..",
-	"profession_understanding": "He thinks they are like hunters, each seeking the truth but using different tools.",
-	"afterlife_perception": "Believes afterlife is a reflection of the choices made during life, rather than an absolute destination.",
+	"name": "Theo Gale",
+	"personality": "sedate",
+	"speech_style": "sedate",
+	"profession_understanding": "변호사는 피고인이 '선'이었다고 주장하고, 검사는 '악'이었다고 주장하며 서로 설득하려 노력한다.",
+	"afterlife_perception": "이승은 잠시머무는 곳일 뿐, 모든 것은 저 너머에 있다.",
 	"past_life_relevance": false,
-	"knowledge_of_defendant's past_life": 20
+	"knowledge_of_defendant's past_life": 10
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {
