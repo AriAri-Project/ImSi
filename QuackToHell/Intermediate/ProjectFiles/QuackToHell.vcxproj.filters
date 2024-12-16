@@ -879,12 +879,32 @@
     <ClCompile Include="..\..\Source\QuackToHell\Private\MyGameModeTest.cpp">
       <Filter>Source\QuackToHell\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\QuackToHell\Private\MyObject.cpp">
+      <Filter>Source\QuackToHell\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\QuackToHell\Private\MyTEstObject.cpp">
+      <Filter>Source\QuackToHell\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\QuackToHell\Public">
       <UniqueIdentifier>{795174C0-2851-3D02-B997-0FFBC6C132CC}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\QuackToHell\Public\MyGameModeTest.h">
       <Filter>Source\QuackToHell\Public</Filter>
     </ClInclude>
-    <None Include="cpp.hint" />
+    <ClInclude Include="..\..\Source\QuackToHell\Public\MyObject.h">
+      <Filter>Source\QuackToHell\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\QuackToHell\Public\MyTEstObject.h">
+      <Filter>Source\QuackToHell\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\QuackToHell\test">
+      <UniqueIdentifier>{A2A38A01-AD59-3EFA-83CA-B8FF7DA60318}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\QuackToHell\test\QMyActor.cpp">
+      <Filter>Source\QuackToHell\test</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\test\QMyActor.h">
+      <Filter>Source\QuackToHell\test</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
