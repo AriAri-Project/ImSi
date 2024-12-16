@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -18,18 +18,18 @@ class QUACKTOHELL_API UQChatUserWidget : public UUserWidget
 {
 	GENERATED_BODY()
 private:
-	//NativeConstruct : AddToViewport ½Ã È£ÃâµÈ´Ù. NativeOnInitialized ¿Í ´Ş¸®, Viewport ¿¡ Add µÉ ¶§¸¶´Ù ºÒ¸°´Ù!
+	//NativeConstruct : AddToViewport ì‹œ í˜¸ì¶œëœë‹¤. NativeOnInitialized ì™€ ë‹¬ë¦¬, Viewport ì— Add ë  ë•Œë§ˆë‹¤ ë¶ˆë¦°ë‹¤!
 	virtual void NativeConstruct();
 private:
-	//Ã¤ÆÃ ÀÌº¥Æ® ½Ã È£ÃâµÉ ÇÔ¼ö
+	//ì±„íŒ… ì´ë²¤íŠ¸ ì‹œ í˜¸ì¶œë  í•¨ìˆ˜
 	UFUNCTION()
 	void HandleDialogEvent(FString Name, FString Content);
 
 public:
-	//ºí·çÇÁ¸°Æ®¿¡¼­ ÀÓÇÃ¸®¸àÅ×ÀÌ¼Ç-> µû¶ó¼­ cpp¿¡¼­´Â Á¤ÀÇÇÏÁö¾ÊÀ½. 
+	//ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œ ì„í”Œë¦¬ë©˜í…Œì´ì…˜-> ë”°ë¼ì„œ cppì—ì„œëŠ” ì •ì˜í•˜ì§€ì•ŠìŒ. 
 	UFUNCTION(BlueprintImplementableEvent, Category = ChatWidget)
 	void SettingUserChatText(const FString& NPCName, const FString& Content);
-	//ºí·çÇÁ¸°Æ®¿¡¼­ ÀÓÇÃ¸®¸àÅ×ÀÌ¼Ç-> µû¶ó¼­ cpp¿¡¼­´Â Á¤ÀÇÇÏÁö¾ÊÀ½. 
+	//ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œ ì„í”Œë¦¬ë©˜í…Œì´ì…˜-> ë”°ë¼ì„œ cppì—ì„œëŠ” ì •ì˜í•˜ì§€ì•ŠìŒ. 
 	UFUNCTION(BlueprintImplementableEvent, Category = ChatWidget)
 	void SettingNPCChatText(const FString& NPCName, const FString& Content);
 

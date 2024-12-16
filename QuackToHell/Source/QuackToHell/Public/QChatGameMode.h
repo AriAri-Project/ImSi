@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -17,7 +17,7 @@ class QUACKTOHELL_API AQChatGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 public:
-	//µğ¹ö±ë - ÇÔ¼öÈ£Ãâ
+	//ë””ë²„ê¹… - í•¨ìˆ˜í˜¸ì¶œ
 	UFUNCTION(Exec)
 	void Test();
 	UFUNCTION(Exec, Category = "Command")
@@ -28,8 +28,8 @@ public:
 protected:
 	//TODO - Implement Widget Variables
 	UPROPERTY(EditAnywhere, Category = "Widgets")
-	//ºí·çÇÁ¸°Æ® ¿¡µğÅÍÀÇ µğÅ×ÀÏ ÆĞ³Î¿¡¼­ GameWidgetClass¿¡ À§Á¬ ºí·çÇÁ¸°Æ®¸¦ ÇÒ´ç(TSubclassOf<UUserWidget> Å¸ÀÔÀº UUserWidgetÀ» »ó¼Ó¹Ş´Â Å¬·¡½º¸¦ ÀúÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.)
-	//TSubclassOf<class UUserWidget>´Â UUserWidgetÀ» »ó¼Ó¹Ş´Â Å¬·¡½º Å¸ÀÔ¸¸ ÀúÀåÇÒ ¼ö ÀÖ´Â ¾ÈÀüÇÑ Æ÷ÀÎÅÍ
+	//ë¸”ë£¨í”„ë¦°íŠ¸ ì—ë””í„°ì˜ ë””í…Œì¼ íŒ¨ë„ì—ì„œ GameWidgetClassì— ìœ„ì ¯ ë¸”ë£¨í”„ë¦°íŠ¸ë¥¼ í• ë‹¹(TSubclassOf<UUserWidget> íƒ€ì…ì€ UUserWidgetì„ ìƒì†ë°›ëŠ” í´ë˜ìŠ¤ë¥¼ ì €ì¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.)
+	//TSubclassOf<class UUserWidget>ëŠ” UUserWidgetì„ ìƒì†ë°›ëŠ” í´ë˜ìŠ¤ íƒ€ì…ë§Œ ì €ì¥í•  ìˆ˜ ìˆëŠ” ì•ˆì „í•œ í¬ì¸í„°
 	TSubclassOf<class UUserWidget> GameWidgetClass;
 	UPROPERTY()
 	UQChatUserWidget* GameWidget;
