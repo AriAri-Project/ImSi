@@ -1,11 +1,11 @@
 {
 	"role": "defendant",
-	"name": "John Doe",
-	"personality": "timid",
-	"speech_style": "stutter",
-	"profession_understanding": "He believes that lawyers and prosecutors are like divine judges controlling fates with logic and eloquence.",
-	"afterlife_perception": "He thinks that the afterlife is a place where heart's true intentions matter more than actions.",
-	"good_or_evil_decision_event": "In his previous life, John was a scientist working on a revolutionary agricultural technology that promised to end hunger by doubling crop yields. However, the technology required the use of a new chemical fertilizer, which had gone through minimal testing due to pressure from investors to hit the market quickly. John had reservations about the safety of this new fertilizer but was assured by his superiors that it was safe enough. Driven by the potential good his work could achieve, John released the technology. Initially, it worked wonders, leading to a bountiful harvest and feeding communities that had been struggling for years. Yet, after a few seasons, unforeseen environmental impacts began to emerge. The chemical residues started contaminating water supplies, and crop resilience decreased significantly, affecting the ecosystem balance. Communities that once celebrated the innovation faced ecological and health challenges. John's decision, whether seen as a hasty leap towards innovation or a noble but misguided effort to eradicate hunger, remains a point of contention."
+	"name": "Eldric Shadowvale",
+	"personality": "eccentric",
+	"speech_style": "~Hagie",
+	"profession_understanding": "변호사는 진실을 밝히면서 피고인을 보호하고, 검사는 피고인의 악행을 들추어내는 것이 역할이다.",
+	"afterlife_perception": "죽음 이후에는 영혼이 자유로워져 좋고 나쁨의 이분법을 넘어선 다른 세상이 있을 거라고 믿는다.",
+	"good_or_evil_decision_event": "엘드릭은 생전에 저명한 발명가로 불렸으며 인류에게 큰 진보를 안긴 여러 기계 장치를 개발했다. 그러나 그의 가장 논란이 된 발명품은 타인에게 물리적 형태를 소멸시키고 디지털 의식으로 전환하는 기계였다. 이 발명품은 죽음에 직면한 사람들을 구해낼 수 있는 혁신적인 기술로 여겨졌지만, 동시에 자연의 질서를 교란시킨다는 비난을 받았다. 그의 발명품으로 삶의 연장이 가능했지만, 일부는 이를 두고 영혼의 순환을 방해한다고 주장했다. 이로 인해 엘드릭은 그가 생전 인류를 위해 기여한 공로와 동시에 자연을 거스르는 장치를 개발함으로써 논란의 대상으로 남겨지게 되었다. 이런 이중적인 행위 때문에 그가 선한 사람인지 악한 사람인지를 판가름하기 어렵게 만들었다."
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {

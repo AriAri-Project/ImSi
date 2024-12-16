@@ -1,12 +1,12 @@
 {
 	"role": "jury",
-	"name": "Emily Clark",
-	"personality": "eccentric",
-	"speech_style": "sedate",
-	"profession_understanding": "She views them as strategic game players maneuvering the board of justice.",
-	"afterlife_perception": "She pictures heaven and hell as two sides of the same coin, both necessary to maintain cosmic balance.",
+	"name": "Samuel Quimbly",
+	"personality": "timid",
+	"speech_style": "stutter",
+	"profession_understanding": "법정에서는 공정하게 증거와 증언을 듣고 판단해야 한다고 생각한다.",
+	"afterlife_perception": "사후 세계는 자신이 생전에 한 행동에 따라 가는 곳이 결정된다고 믿는다.",
 	"past_life_relevance": true,
-	"past_life_story": "Emily was once John's neighbor and witnessed his struggles and triumphs first-hand. She admired his dedication to progress and often pondered the moral consequences of his actions.",
+	"past_life_story": "Samuel과 Eldric은 어린 시절 같은 마을에서 자랐다. Samuel은 Eldric의 실험실을 자주 방문했고, Eldric의 혁신적인 생각들에 감명받았다. 하지만 한 번 Eldric의 위험한 실험으로 인해 부상을 당했던 사건이 있었다. 그 사건 이후로 Samuel은 Eldric의 발명품에 대해 항상 복잡한 감정을 가지고 있었다.",
 	"knowledge_of_defendant's past_life": 45
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:

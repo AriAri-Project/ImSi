@@ -1,12 +1,13 @@
 {
 	"role": "resident",
-	"name": "Olivia Stone",
+	"name": "Tilly Fernhope",
 	"personality": "cute",
-	"speech_style": "~Hagie",
-	"profession_understanding": "She perceives them as storytellers convincing others of their narrative.",
-	"afterlife_perception": "Thinks of afterlife as a continuation of one's story where true character is revealed.",
+	"speech_style": "HmmHmm..",
+	"profession_understanding": "법정은 그저 사람들간의 다툼을 해결하는 곳이라고 생각한다.",
+	"afterlife_perception": "사후 세계는 마음의 상태에 따라 경험한다 믿는다.",
 	"past_life_relevance": true,
-	"past_life_story": "Olivia was a journalist who covered the unfolding events of John's agricultural advancements and the subsequent fallout. Her reports played a crucial role in raising public awareness about the emerging issues."
+	"past_life_story": "Tilly는 Eldric의 조교로 일하며 그의 혁신적인 발명품을 보조했다. 그녀는 Eldric이 개발한 기계를 통해 자신의 중증 질환을 개선할 수 있었지만, 이로 인해 자연의 흐름을 거스른다는 죄책감도 느꼈다.",
+	"knowledge_of_defendant's past_life": 50
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {

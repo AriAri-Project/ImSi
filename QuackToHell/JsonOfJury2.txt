@@ -1,10 +1,10 @@
 {
 	"role": "jury",
-	"name": "Michael Brown",
-	"personality": "forage",
-	"speech_style": "HmmHmm..",
-	"profession_understanding": "He thinks they are like hunters, each seeking the truth but using different tools.",
-	"afterlife_perception": "Believes afterlife is a reflection of the choices made during life, rather than an absolute destination.",
+	"name": "Martha Blomgren",
+	"personality": "sedate",
+	"speech_style": "sedate",
+	"profession_understanding": "법정은 진실을 밝히는 장소이며, 정의를 위해 필요하다 생각한다.",
+	"afterlife_perception": "모든 영혼은 결국 그의 삶의 행적에 따라 적절한 곳에 간다고 믿는다.",
 	"past_life_relevance": false,
 	"knowledge_of_defendant's past_life": 20
 }﻿
