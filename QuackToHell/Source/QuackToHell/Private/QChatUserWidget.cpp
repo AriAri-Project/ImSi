@@ -1,11 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "QChatUserWidget.h"
 
 void UQChatUserWidget::HandleDialogEvent(FString Name, FString Content)
 {
-    UE_LOG(LogTemp, Display, TEXT("¹ÙÀÎµùÇÔ¼öÈ£Ãâ in widget"));
+    UE_LOG(LogTemp, Display, TEXT("ë°”ì¸ë”©í•¨ìˆ˜í˜¸ì¶œ in widget"));
     if (Name == "User") {
         SettingUserChatText(Name, Content);
     }
@@ -17,7 +17,7 @@ void UQChatUserWidget::HandleDialogEvent(FString Name, FString Content)
 
 
 
-//NativeConstruct : AddToViewport ½Ã È£ÃâµÈ´Ù. NativeOnInitialized ¿Í ´Ş¸®, Viewport ¿¡ Add µÉ ¶§¸¶´Ù ºÒ¸°´Ù!
+//NativeConstruct : AddToViewport ì‹œ í˜¸ì¶œëœë‹¤. NativeOnInitialized ì™€ ë‹¬ë¦¬, Viewport ì— Add ë  ë•Œë§ˆë‹¤ ë¶ˆë¦°ë‹¤!
 void UQChatUserWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
@@ -27,11 +27,11 @@ void UQChatUserWidget::NativeConstruct()
 
     for (AActor* Actor : FoundActors)
     {
-        //¾×ÅÍÀÇ APIOverviewÅ¬·¡½º¿¡ Á¢±Ù
+        //ì•¡í„°ì˜ APIOverviewí´ë˜ìŠ¤ì— ì ‘ê·¼
         AAPIOverview* APIActor = Cast<AAPIOverview>(Actor);
         if (APIActor)
         {
-            //µ¨¸®°ÔÀÌÆ®¸¦ ¹ÙÀÎµù
+            //ë¸ë¦¬ê²Œì´íŠ¸ë¥¼ ë°”ì¸ë”©
             APIActor->DialogDelegate->OnDialogTriggered.AddDynamic(this, &UQChatUserWidget::HandleDialogEvent);
             UE_LOG(LogTemp, Log, TEXT("Success Binding in QChatUserWidget: %s"), *APIActor->NPCName);
         }
