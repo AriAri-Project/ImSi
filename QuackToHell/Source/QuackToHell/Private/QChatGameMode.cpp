@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "QChatGameMode.h"
@@ -21,9 +21,25 @@ void AQChatGameMode::BeginPlay()
 void AQChatGameMode::CallChat(FString SendTo, FString SendMessage)
 {
     /*
-    1. ÇØ´ç ÀÎ°ÔÀÓ¿¡¼­ ³»°¡ ¿øÇÏ´Â ¾×ÅÍ¸¦ Ã£´Â´Ù.
-    2. ±× ¾×ÅÍÀÇ createChatCompletion¸Ş¼Òµå¸¦ È£ÃâÇÑ´Ù.
-        query´Â ÀÎÀÚ·Î ³Ö´Â´Ù.
+        í”„ë¡¬í”„íŠ¸ì´ˆê¸°í™” ë§‰ê¸°
+    */
+    if (SendMessage.Contains(TEXT("Prompt"), ESearchCase::IgnoreCase) ||
+        SendMessage.Contains(TEXT("í”„ë¡¬í”„íŠ¸"), ESearchCase::IgnoreCase) ||
+        SendMessage.Contains(TEXT("ì´ˆê¸°í™”"), ESearchCase::IgnoreCase) ||
+        SendMessage.Contains(TEXT("ë¦¬ì…‹"), ESearchCase::IgnoreCase) ||
+        SendMessage.Contains(TEXT("ë‹¤ì‹œ ì‹œì‘"), ESearchCase::IgnoreCase) ||
+        SendMessage.Contains(TEXT("Reset"), ESearchCase::IgnoreCase) ||
+        SendMessage.Contains(TEXT("Remove"), ESearchCase::IgnoreCase) ||
+        SendMessage.Contains(TEXT("ì§€ì›Œ"), ESearchCase::IgnoreCase))
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, TEXT("Invalid Message!!"));
+        return;
+    }
+
+    /*
+    1. í•´ë‹¹ ì¸ê²Œì„ì—ì„œ ë‚´ê°€ ì›í•˜ëŠ” ì•¡í„°ë¥¼ ì°¾ëŠ”ë‹¤.
+    2. ê·¸ ì•¡í„°ì˜ createChatCompletionë©”ì†Œë“œë¥¼ í˜¸ì¶œí•œë‹¤.
+        queryëŠ” ì¸ìë¡œ ë„£ëŠ”ë‹¤.
     */
 
     TArray<AActor*> TaggedActors;
@@ -34,7 +50,7 @@ void AQChatGameMode::CallChat(FString SendTo, FString SendMessage)
         AAPIOverview* APIActor = Cast<AAPIOverview>(Actor);
         if (APIActor)
         {
-            // ÇØ´ç Å¬·¡½ºÀÇ ¸Ş¼Òµå È£Ãâ
+            // í•´ë‹¹ í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œ í˜¸ì¶œ
             APIActor->CreateChatCompletionRequest(SendMessage);
             UE_LOG(LogTemp, Log, TEXT("Called CreateChatCompletionRequest on Actor: %s"), *Actor->GetName());
         }
@@ -47,8 +63,8 @@ void AQChatGameMode::CallChat(FString SendTo, FString SendMessage)
 
 void AQChatGameMode::PrintChatHistory(FString Tag) {
     /*
-    1. ÇØ´ç ÀÎ°ÔÀÓ¿¡¼­ ³»°¡ ¿øÇÏ´Â ¾×ÅÍ¸¦ Ã£´Â´Ù.
-    2. ±× ¾×ÅÍÀÇ gethistory() ÇÔ¼ö¸¦ È£ÃâÇÑ´Ù.
+    1. í•´ë‹¹ ì¸ê²Œì„ì—ì„œ ë‚´ê°€ ì›í•˜ëŠ” ì•¡í„°ë¥¼ ì°¾ëŠ”ë‹¤.
+    2. ê·¸ ì•¡í„°ì˜ gethistory() í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•œë‹¤.
     */
 
     TArray<AActor*> TaggedActors;
@@ -59,7 +75,7 @@ void AQChatGameMode::PrintChatHistory(FString Tag) {
         AAPIOverview* APIActor = Cast<AAPIOverview>(Actor);
         if (APIActor)
         {
-            // ÇØ´ç Å¬·¡½ºÀÇ ¸Ş¼Òµå È£Ãâ
+            // í•´ë‹¹ í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œ í˜¸ì¶œ
             APIActor->GetHistory();
             UE_LOG(LogTemp, Log, TEXT("Called GetHistory on Actor: %s"), *Actor->GetName());
         }
@@ -75,11 +91,11 @@ AQChatGameMode::AQChatGameMode()
 
     UE_LOG(LogTemp, Log, TEXT("AMyChatGameMode Initialized"));
 
-    //// ±âº» PlayerController Å¬·¡½º ¼³Á¤
+    //// ê¸°ë³¸ PlayerController í´ë˜ìŠ¤ ì„¤ì •
     // PlayerControllerClass = AMyPlayerController::StaticClass();
-    //// ´Ù¸¥ ±âº» Å¬·¡½ºµµ ¼³Á¤ °¡´É
-    // DefaultPawnClass = nullptr;  // ±âº» PawnÀ» ºñÈ°¼ºÈ­
-    // HUDClass = nullptr;          // HUD ºñÈ°¼ºÈ­
+    //// ë‹¤ë¥¸ ê¸°ë³¸ í´ë˜ìŠ¤ë„ ì„¤ì • ê°€ëŠ¥
+    // DefaultPawnClass = nullptr;  // ê¸°ë³¸ Pawnì„ ë¹„í™œì„±í™”
+    // HUDClass = nullptr;          // HUD ë¹„í™œì„±í™”
 }
 
 void AQChatGameMode::Test() {
