@@ -1,11 +1,11 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHellFork\\QuackToHell\\Source\\QuackToHell\\QuackToHell.Build.cs",
-		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHellFork\\QuackToHell\\Plugins\\OpenAI\\Source\\OpenAIEditor\\OpenAIEditor.Build.cs",
-		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHellFork\\QuackToHell\\Plugins\\OpenAI\\Source\\OpenAITestRunner\\OpenAITestRunner.Build.cs",
-		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHellFork\\QuackToHell\\Plugins\\OpenAI\\Source\\OpenAI\\OpenAI.Build.cs",
-		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHellFork\\QuackToHell\\Source\\QuackToHell.Target.cs",
-		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHellFork\\QuackToHell\\Source\\QuackToHellEditor.Target.cs"
+		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHell_OriginalRepo\\QuackToHell\\QuackToHell\\Source\\QuackToHell\\QuackToHell.Build.cs",
+		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHell_OriginalRepo\\QuackToHell\\QuackToHell\\Plugins\\OpenAI\\Source\\OpenAIEditor\\OpenAIEditor.Build.cs",
+		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHell_OriginalRepo\\QuackToHell\\QuackToHell\\Plugins\\OpenAI\\Source\\OpenAITestRunner\\OpenAITestRunner.Build.cs",
+		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHell_OriginalRepo\\QuackToHell\\QuackToHell\\Plugins\\OpenAI\\Source\\OpenAI\\OpenAI.Build.cs",
+		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHell_OriginalRepo\\QuackToHell\\QuackToHell\\Source\\QuackToHell.Target.cs",
+		"C:\\Users\\swu\\Documents\\Unreal Projects\\QuackToHell_OriginalRepo\\QuackToHell\\QuackToHell\\Source\\QuackToHellEditor.Target.cs"
 	],
 	"EngineVersion": "5.4.4"
 }

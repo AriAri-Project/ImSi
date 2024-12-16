@@ -879,12 +879,23 @@
     <ClCompile Include="..\..\Source\QuackToHell\Private\MyGameModeTest.cpp">
       <Filter>Source\QuackToHell\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\QuackToHell\Private\QChatGameMode.cpp">
+      <Filter>Source\QuackToHell\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\QuackToHell\Private\QChatUserWidget.cpp">
+      <Filter>Source\QuackToHell\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\QuackToHell\Public">
       <UniqueIdentifier>{795174C0-2851-3D02-B997-0FFBC6C132CC}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\QuackToHell\Public\MyGameModeTest.h">
       <Filter>Source\QuackToHell\Public</Filter>
     </ClInclude>
-    <None Include="cpp.hint" />
+    <ClInclude Include="..\..\Source\QuackToHell\Public\QChatGameMode.h">
+      <Filter>Source\QuackToHell\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\QuackToHell\Public\QChatUserWidget.h">
+      <Filter>Source\QuackToHell\Public</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
