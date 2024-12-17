@@ -7,6 +7,8 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "InputMappingContext.h"
 #include "InputAction.h"
+#include "Character/QNonPlayer.h"
+#include "Character/QPlayer.h"
 #include "GameFramework/PlayerController.h"
 
 AQPlayerController::AQPlayerController(const FObjectInitializer& ObjectInitializer)
@@ -21,7 +23,6 @@ void AQPlayerController::BeginPlay()
 
 	if (auto* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer()))
 	{
-		UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("PlayerController BeginPlay"));
 		Subsystem->AddMappingContext(InputMappingContext, 0);
 	}
 }
@@ -32,10 +33,10 @@ void AQPlayerController::SetupInputComponent()
 
 	if (auto* EnhancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent))
 	{
-		UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("PlayerController SetupInputComponent"));
 		EnhancedInputComponent->BindAction(WalkAction, ETriggerEvent::Triggered, this, &AQPlayerController::Input_Walk);
 		EnhancedInputComponent->BindAction(TurnAction, ETriggerEvent::Triggered, this, &AQPlayerController::Input_Turn);
 		EnhancedInputComponent->BindAction(TalkAction, ETriggerEvent::Triggered, this, &AQPlayerController::Input_Talk);
+		EnhancedInputComponent->BindAction(EndTalkAction, ETriggerEvent::Triggered, this, &AQPlayerController::Input_EndTalk);
 
 		InputComponent->BindAction("RightMouseButton", IE_Pressed, this, &AQPlayerController::RightMousePressed);
 		InputComponent->BindAction("RightMouseButton", IE_Released, this, &AQPlayerController::RightMouseReleased);
@@ -44,8 +45,6 @@ void AQPlayerController::SetupInputComponent()
 
 void AQPlayerController::Input_Walk(const FInputActionValue& InputValue)
 {
-	UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("Lets Move!"));
-
 	FVector2d InputVector = InputValue.Get<FVector2D>();
 
 	if (TObjectPtr<ACharacter> PlayerCharacter = Cast<ACharacter>(GetPawn()))
@@ -87,7 +86,6 @@ void AQPlayerController::Input_Walk(const FInputActionValue& InputValue)
 
 void AQPlayerController::Input_Turn(const FInputActionValue& InputValue)
 {
-	UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("PlayerController Input_Turn"));
 	if (bRightMousePressed)
 	{
 		// float Val = InputValue.Get<float>();
@@ -97,20 +95,39 @@ void AQPlayerController::Input_Turn(const FInputActionValue& InputValue)
 	}
 }
 
-//eÅ° ´­·¶À» ¶§// 
+//eÅ° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½// 
 void AQPlayerController::Input_Talk(const FInputActionValue& InputValue)
 {
+	// Playerë¡œë¶€í„° í˜„ì¬ ëŒ€í™”ê°€ëŠ¥í•œ NPC TArrayë°›ì•„ì˜´.
+	TObjectPtr<AQPlayer> PlayerCharacter = Cast<AQPlayer>(GetPawn());
+	if (PlayerCharacter->GetIsTalking()) return; // Playerê°€ ì´ë¯¸ ëŒ€í™”ì¤‘ì´ë¼ë©´ return
+	TArray<AQNonPlayer*> TalkableNPCs = PlayerCharacter->GetTalkableNPCs();
+
+	// ë””ë²„ê¹… ë¡œê·¸
+	for (AQNonPlayer* NPC : TalkableNPCs)
+	{
+		UE_LOG(LogTemp, Display, TEXT("TalkAbleNPCs : %s"), *NPC->GetName());
+	}
+
+	// ëŒ€í™” ê°€ëŠ¥í•œ NPCê°€ ì—†ì„ë•ŒëŠ” ë°”ë¡œ returnë•Œë¦¬ê¸°
+	if (TalkableNPCs.IsEmpty()) return;
+
+	// ì—¬ê¸°ì— ëŒ€í™” êµ¬í˜„. í•­ìƒ Array ì²«ë²ˆì¨° NPCì™€ ëŒ€í™”. 
+	CurrentTalkingNPC = TalkableNPCs[0];
+	PlayerCharacter->SetIsTalking(true);
+	CurrentTalkingNPC->bIsTalking = true;
+	CurrentTalkingNPC->bIsTalkable = false;
 	UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("Lets Talk!"));
-	//if¹® ¼­ÇöÀÌ ÈÄ¿¡ ±¸Çö: AQNonPlayer¶ó´Â Å¬·¡½º ³Ñ°ÜÁØ´Ù°í »ı°¢ÇÏ°í ÀÖ±â. 
+	//ifï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½: AQNonPlayerï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ°ï¿½ï¿½Ø´Ù°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ö±ï¿½. 
 	if (GameWidgetClass != nullptr) {
 		GameWidget = Cast<UQChatUserWidget>(CreateWidget(GetWorld(), GameWidgetClass));
 		if (GameWidget != nullptr) {
 			GameWidget->AddToViewport();
-			//***ÀÓ½Ã***//
+			//***ï¿½Ó½ï¿½***//
 			GameWidget->SpeakingNPCTag = "Jury1";
 
-			//ÅÂ±× ±¸ºĞ ºÎºĞ//AActor·Î Ä³½ºÆÃÇÏ¿© º¸±â
-			//´ëÈ­Áß NPCÀÇ ÅÂ±×¸¦ º¸°í, widgetÀÇ ÅÂ±× ¼¼ÆÃÀ» ¹Ù²Û´Ù.
+			//ï¿½Â±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½//AActorï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½
+			//ï¿½ï¿½È­ï¿½ï¿½ NPCï¿½ï¿½ ï¿½Â±×¸ï¿½ ï¿½ï¿½ï¿½ï¿½, widgetï¿½ï¿½ ï¿½Â±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Û´ï¿½.
 			/*if (NPC->ActorHasTag("Defendant"))
 			{
 				GameWidget->SpeakingNPCTag = "Defendant";
@@ -131,9 +148,19 @@ void AQPlayerController::Input_Talk(const FInputActionValue& InputValue)
 	}
 }
 
-// esc ´­·¶À» ¶§// 
+void AQPlayerController::Input_EndTalk(const FInputActionValue& InputValue)
+{
+	TObjectPtr<AQPlayer> PlayerCharacter = Cast<AQPlayer>(GetPawn());
+	if (!(PlayerCharacter->GetIsTalking())) return;
 
-
+	// ë””ë²„ê¹… ë¡œê·¸
+	UE_LOG(LogTemp, Display, TEXT("CurrentTalkingNPC : %s"), *CurrentTalkingNPC->GetName());
+	
+	// Playerê°€ Talking ì¤‘ì´ë¼ë©´ Talking ë§ˆë¬´ë¦¬ ì‘ì—…
+	PlayerCharacter->SetIsTalking(false);
+	CurrentTalkingNPC->bIsTalking = false;
+	CurrentTalkingNPC->bIsTalkable = true;
+}
 
 void AQPlayerController::RightMousePressed()
 {

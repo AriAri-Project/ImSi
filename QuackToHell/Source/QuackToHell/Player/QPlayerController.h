@@ -7,6 +7,7 @@
 #include "GameFramework/Character.h" 
 #include "InputMappingContext.h"
 #include "InputAction.h"
+#include "Character/QNonPlayer.h"
 #include "GameFramework/PlayerController.h"
 #include <QChatUserWidget.h>
 
@@ -40,12 +41,19 @@ protected:
 	UPROPERTY(EditAnywhere, Category = Input)
 	TObjectPtr<UInputAction> TalkAction;
 
+	UPROPERTY(EditAnywhere, Category = Input)
+	TObjectPtr<UInputAction> EndTalkAction;
+
+	UPROPERTY(EditAnywhere, Category = Input)
+	TObjectPtr<AQNonPlayer> CurrentTalkingNPC;
+
 private:
 	bool bRightMousePressed;
 
 	void Input_Walk(const FInputActionValue& InputValue);
 	void Input_Turn(const FInputActionValue& InputValue);
 	void Input_Talk(const FInputActionValue& InputValue);
+	void Input_EndTalk(const FInputActionValue& InputValue);
 
 	void RightMousePressed();
 	void RightMouseReleased();
