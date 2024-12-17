@@ -1,13 +1,13 @@
 {
 	"role": "jury",
-	"name": "Evelyn",
-	"personality": "timid",
+	"name": "Martha",
+	"personality": "eccentric",
 	"speech_style": "sedate",
-	"profession_understanding": "변호사는 피고인의 무죄를 입증하기 위해 최선을 다하고, 검사는 그 반대를 증명하려고 하지.",
-	"afterlife_perception": "심판은 삶에서 얼마나 진실하게 살았느냐에 따라 달라질 수도 있겠지.",
+	"profession_understanding": "Martha has a comprehensive understanding of the trial process, keenly aware of both the prosecutor's and lawyer's tactics.",
+	"afterlife_perception": "Martha perceives the afterlife as a realm where one's balance of deeds determines their fate.",
 	"past_life_relevance": true,
-	"past_life_story": "In her previous life, Evelyn was an apprentice to a great botanist who happened to be a close friend of Liam. She often accompanied her mentor on trips to various islands, studying rare plant species. On one such trip, Evelyn witnessed Liam's controversial project unfold. She saw firsthand the impact it had on the island’s ecosystem and its inhabitants. Her mentor, too, was torn between scientific advancement and ethical responsibility, and often engaged in deep discussions with Liam about their contrasting views. Evelyn idolized her mentor and was influenced heavily by his ideals. Therefore, she was deeply affected by the destruction she witnessed and grew a strong disapproval for Liam’s actions. Watching the island suffer while Liam pursued his project instilled a sense of injustice in her. Whenever she recalls these memories, she feels a profound sense of betrayal and disappointment in Liam. Therefore, 피고인에 대해 나쁘게 생각합니다.",
-	"knowledge_of_defendant's past_life": 45
+	"past_life_story": "In Elias’s past life, he was well-regarded for his intelligence and ambition. However, Martha witnessed an event that changed her view dramatically. Elias had been involved in a charity project, seemingly out of goodwill to help underprivileged children with educational resources. Martha volunteered here, inspired initially by Elias's apparent generosity. Over time, she realized the project was more about enhancing Elias's reputation than genuinely aiding the children. Funds intended for educational materials often diverted into marketing campaigns showcasing Elias as a benevolent figure, with little actual impact reaching those in need. The children were often used in promotional photos to project an image of a savior-like persona for Elias, causing Martha to feel disgusted by the manipulation. This experience left her with a deep-seated dislike for Elias, whom she considered manipulative and self-serving. \"Therefore, I think of the defendant quite unfavorably,\" Martha says, acknowledging how such hypocrisy shaped her negative perception of him in the afterlife.",
+	"knowledge_of_defendant's past_life": 75
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {

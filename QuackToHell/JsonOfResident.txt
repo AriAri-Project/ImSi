@@ -1,12 +1,13 @@
 {
 	"role": "resident",
-	"name": "Sophia",
+	"name": "Olivia",
 	"personality": "forage",
-	"speech_style": "~Hagie",
-	"profession_understanding": "음, 변호사는 진실을 밝히려고 하고, 검사는 진실을 감추려고 하지 않나?",
-	"afterlife_perception": "음.. 천국과 지옥은 결국 마음의 상태일지도 몰라.",
-	"past_life_relevance": false,
-	"knowledge_of_defendant's past_life": 20
+	"speech_style": "HmmHmm..",
+	"profession_understanding": "Olivia understands the strategic play between a prosecutor and a lawyer, like a game of chess.",
+	"afterlife_perception": "She thinks the afterlife is a garden where souls blossom according to their earthly deeds.",
+	"past_life_relevance": true,
+	"past_life_story": "Olivia remembers Elias from her mortal days as an inspiring leader in the tech community. Elias was known for pushing technological boundaries and leading significant projects that promised societal benefits. Olivia was particularly impressed by how Elias invested time mentoring younger employees, often taking personal interest in their career development. She had a firsthand experience of Elias's mentorship when he helped a struggling colleague navigate a difficult project, which turned into a successful venture under Elias's guidance. This compassionate side of Elias fostered great respect and admiration from Olivia. Despite knowing about some controversial projects Elias undertook, Olivia focuses on his genuine attempts to support and uplift others around him. \"Therefore, I think of the defendant favorably,\" she states, emphasizing his dedication to nurturing potential in others and improving the community through knowledge and support.",
+	"knowledge_of_defendant's past_life": 70
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {
