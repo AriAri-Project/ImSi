@@ -3,10 +3,13 @@
 
 #include "Character/QPlayer.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SphereComponent.h"
+#include "QNonPlayer.h"
 
 AQPlayer::AQPlayer()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	bIsTalking = false;
 
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
@@ -29,14 +32,67 @@ AQPlayer::AQPlayer()
 
 	GetMesh()->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
 	GetMesh()->SetRelativeLocation(FVector(0.0f, 0.0f, -30.0f));
+
+	TalkableRangeSphere = CreateDefaultSubobject<USphereComponent>("TalkableRangeSphere");
+	TalkableRangeSphere->SetSphereRadius(100);
+	TalkableRangeSphere->SetupAttachment(GetCapsuleComponent());
+
+	// 오버랩 이벤트 바인딩
+	TalkableRangeSphere->OnComponentBeginOverlap.AddDynamic(this, &AQPlayer::OnOverlapBegin);
+	TalkableRangeSphere->OnComponentEndOverlap.AddDynamic(this, &AQPlayer::OnOverlapEnd);
 }
 
-void AQPlayer::BeginPlay()
+TArray<AQNonPlayer*> AQPlayer::GetTalkableNPCs()
 {
-	Super::BeginPlay();
+	return TalkableNPCs;
 }
 
-void AQPlayer::Tick(float DeltaTime)
+bool AQPlayer::GetIsTalking()
 {
-	Super::Tick(DeltaTime);
+	return bIsTalking;
+}
+
+void AQPlayer::SetIsTalking(bool IsTalking)
+{
+	bIsTalking = IsTalking;
+}
+
+void AQPlayer::OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+                              class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	// OtherActor가 NPC가 아니라면 return, 맞다면 대화가능여부 체크하고 TalkAbleNPCs에 추가
+	AQNonPlayer* NonPlayer = Cast<AQNonPlayer>(OtherActor);
+	if (NonPlayer == nullptr) return;
+	if (!(NonPlayer->bIsTalkable) || NonPlayer->bIsTalking) return;
+	TalkableNPCs.Add(NonPlayer);
+	
+	// 디버깅 로그
+	UE_LOG(LogTemp, Display, TEXT("AQPlayer::OnOverlapBegin %s"), *NonPlayer->GetName());
+	for (AQNonPlayer* NPC : TalkableNPCs)
+	{
+		UE_LOG(LogTemp, Display, TEXT("TalkAbleNPCs : %s"), *NPC->GetName());
+	}
+}
+
+void AQPlayer::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+	class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	// OtherActor가 NPC가 아니라면 return, 맞다면 TalkAbleNPCs에서 제거
+	AQNonPlayer* NonPlayer = Cast<AQNonPlayer>(OtherActor);
+	if (NonPlayer == nullptr) return;
+	
+	UE_LOG(LogTemp, Display, TEXT("AQPlayer::OnOverlapEnd %s"), *NonPlayer->GetName());
+	NonPlayer->bIsTalking = false;
+	TalkableNPCs.Remove(Cast<AQNonPlayer>(NonPlayer));
+
+	// 디버깅 로그
+	if (TalkableNPCs.IsEmpty())
+	{
+		UE_LOG(LogTemp, Display, TEXT("TalkAbleNPCs : none"));
+		return;
+	}
+	for (AQNonPlayer* NPC : TalkableNPCs)
+	{
+		UE_LOG(LogTemp, Display, TEXT("TalkAbleNPCs : %s"), *NPC->GetName());
+	}
 }

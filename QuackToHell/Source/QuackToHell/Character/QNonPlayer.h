@@ -15,26 +15,31 @@ class QUACKTOHELL_API AQNonPlayer : public AQCharacter
 {
 	GENERATED_BODY()
 
+protected:
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
+	TObjectPtr<class UCapsuleComponent> Capsule;
+	
 public:
+	AQNonPlayer();
+	
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "NPC Information")
 	FString Name;
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "NPC Information")
 	FString Personality;
 
-	// ´ëÈ­ °¡´É ¿©ºÎ
+	// ëŒ€í™” ê°€ëŠ¥ ì—¬ë¶€
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "NPC Information")
 	bool bIsTalkable;
 
-	// ´ëÈ­ ÁßÀÎÁö¿¡ ´ëÇÑ ¿©ºÎ
+	// ëŒ€í™” ì¤‘ì¸ì§€ì— ëŒ€í•œ ì—¬ë¶€
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "NPC Information")
 	bool bIsTalking;
 
-	// ´ëÈ­ ÄğÅ¸ÀÓ
+	// ëŒ€í™” ì¿¨íƒ€ì„
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "NPC Information")
 	float CooltimeForTalk;
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "NPC Information")
 	FString CurrentReply;
-
 };

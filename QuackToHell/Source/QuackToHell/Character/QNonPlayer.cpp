@@ -2,4 +2,16 @@
 
 
 #include "Character/QNonPlayer.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
+AQNonPlayer::AQNonPlayer()
+{
+	Capsule = GetCapsuleComponent();
+	Capsule->SetCapsuleHalfHeight(65);
+
+	GetMesh()->SetRelativeLocation(FVector(0, 0, -50));
+
+	bIsTalkable = true;
+	bIsTalking = false;
+}

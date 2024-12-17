@@ -7,6 +7,8 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "InputMappingContext.h"
 #include "InputAction.h"
+#include "Character/QNonPlayer.h"
+#include "Character/QPlayer.h"
 #include "GameFramework/PlayerController.h"
 
 AQPlayerController::AQPlayerController(const FObjectInitializer& ObjectInitializer)
@@ -21,7 +23,6 @@ void AQPlayerController::BeginPlay()
 
 	if (auto* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer()))
 	{
-		UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("PlayerController BeginPlay"));
 		Subsystem->AddMappingContext(InputMappingContext, 0);
 	}
 }
@@ -32,10 +33,10 @@ void AQPlayerController::SetupInputComponent()
 
 	if (auto* EnhancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent))
 	{
-		UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("PlayerController SetupInputComponent"));
 		EnhancedInputComponent->BindAction(WalkAction, ETriggerEvent::Triggered, this, &AQPlayerController::Input_Walk);
 		EnhancedInputComponent->BindAction(TurnAction, ETriggerEvent::Triggered, this, &AQPlayerController::Input_Turn);
 		EnhancedInputComponent->BindAction(TalkAction, ETriggerEvent::Triggered, this, &AQPlayerController::Input_Talk);
+		EnhancedInputComponent->BindAction(EndTalkAction, ETriggerEvent::Triggered, this, &AQPlayerController::Input_EndTalk);
 
 		InputComponent->BindAction("RightMouseButton", IE_Pressed, this, &AQPlayerController::RightMousePressed);
 		InputComponent->BindAction("RightMouseButton", IE_Released, this, &AQPlayerController::RightMouseReleased);
@@ -44,8 +45,6 @@ void AQPlayerController::SetupInputComponent()
 
 void AQPlayerController::Input_Walk(const FInputActionValue& InputValue)
 {
-	UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("Lets Move!"));
-
 	FVector2d InputVector = InputValue.Get<FVector2D>();
 
 	if (TObjectPtr<ACharacter> PlayerCharacter = Cast<ACharacter>(GetPawn()))
@@ -87,7 +86,6 @@ void AQPlayerController::Input_Walk(const FInputActionValue& InputValue)
 
 void AQPlayerController::Input_Turn(const FInputActionValue& InputValue)
 {
-	UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("PlayerController Input_Turn"));
 	if (bRightMousePressed)
 	{
 		// float Val = InputValue.Get<float>();
@@ -99,7 +97,39 @@ void AQPlayerController::Input_Turn(const FInputActionValue& InputValue)
 
 void AQPlayerController::Input_Talk(const FInputActionValue& InputValue)
 {
-	UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("Lets Talk!"));
+	// Player로부터 현재 대화가능한 NPC TArray받아옴.
+	TObjectPtr<AQPlayer> PlayerCharacter = Cast<AQPlayer>(GetPawn());
+	if (PlayerCharacter->GetIsTalking()) return; // Player가 이미 대화중이라면 return
+	TArray<AQNonPlayer*> TalkableNPCs = PlayerCharacter->GetTalkableNPCs();
+
+	// 디버깅 로그
+	for (AQNonPlayer* NPC : TalkableNPCs)
+	{
+		UE_LOG(LogTemp, Display, TEXT("TalkAbleNPCs : %s"), *NPC->GetName());
+	}
+
+	// 대화 가능한 NPC가 없을때는 바로 return때리기
+	if (TalkableNPCs.IsEmpty()) return;
+
+	// 여기에 대화 구현. 항상 Array 첫번쨰 NPC와 대화. 
+	CurrentTalkingNPC = TalkableNPCs[0];
+	PlayerCharacter->SetIsTalking(true);
+	CurrentTalkingNPC->bIsTalking = true;
+	CurrentTalkingNPC->bIsTalkable = false;
+}
+
+void AQPlayerController::Input_EndTalk(const FInputActionValue& InputValue)
+{
+	TObjectPtr<AQPlayer> PlayerCharacter = Cast<AQPlayer>(GetPawn());
+	if (!(PlayerCharacter->GetIsTalking())) return;
+
+	// 디버깅 로그
+	UE_LOG(LogTemp, Display, TEXT("CurrentTalkingNPC : %s"), *CurrentTalkingNPC->GetName());
+	
+	// Player가 Talking 중이라면 Talking 마무리 작업
+	PlayerCharacter->SetIsTalking(false);
+	CurrentTalkingNPC->bIsTalking = false;
+	CurrentTalkingNPC->bIsTalkable = true;
 }
 
 void AQPlayerController::RightMousePressed()
