@@ -6,10 +6,13 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"C:/Users/swu/Documents/UnrealProjects/OriginalQuackToHell/QuackToHell/QuackToHell/Content/LevelPrototyping/PrototypeMap.umap",
+<<<<<<< HEAD
 				"C:/Users/swu/Documents/UnrealProjects/OriginalQuackToHell/QuackToHell/QuackToHell/Content/YujinTest/TestMap.umap",
 				"C:/Users/swu/Documents/UnrealProjects/OriginalQuackToHell/QuackToHell/QuackToHell/Content/LevelPrototyping/TimerBluePrint.uasset",
 				"C:/Users/swu/Documents/UnrealProjects/OriginalQuackToHell/QuackToHell/QuackToHell/Content/ThirdPerson/Blueprints/DialogueRecord.uasset",
 				"C:/Users/swu/Documents/UnrealProjects/OriginalQuackToHell/QuackToHell/QuackToHell/Content/ThirdPerson/Blueprints/RecorderPNG.uasset",
+=======
+>>>>>>> origin/Siun
 				"C:/Users/swu/Documents/Unreal Projects/QuackToHellFork/QuackToHell/Content/Font/Freesentation-5Medium.uasset",
 				"C:/Users/swu/Documents/Unreal Projects/QuackToHellFork/QuackToHell/Content/Font/Freesentation-5Medium_Font.uasset",
 				"C:/Users/swu/Documents/Unreal Projects/QuackToHellFork/QuackToHell/Content/Font/Mabinogi_Classic_TTF.uasset",
