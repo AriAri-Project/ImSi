@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "Sample/APIOverview.h"
+#include "Kismet/GameplayStatics.h"
 
 #include "Engine/WorldInitializationValues.h"
 #include "Kismet/GameplayStatics.h"
@@ -20,11 +21,16 @@ class QUACKTOHELL_API UQChatUserWidget : public UUserWidget
 private:
 	//NativeConstruct : AddToViewport 시 호출된다. NativeOnInitialized 와 달리, Viewport 에 Add 될 때마다 불린다!
 	virtual void NativeConstruct();
+
 private:
+
+	
 	//채팅 이벤트 시 호출될 함수
 	UFUNCTION()
 	void HandleDialogEvent(FString Name, FString Content);
-
+public:
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "ChatWidget")
+	FString SpeakingNPCTag = "";
 public:
 	//블루프린트에서 임플리멘테이션-> 따라서 cpp에서는 정의하지않음. 
 	UFUNCTION(BlueprintImplementableEvent, Category = ChatWidget)
@@ -33,4 +39,6 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = ChatWidget)
 	void SettingNPCChatText(const FString& NPCName, const FString& Content);
 
+	UFUNCTION(BlueprintCallable, Category = ChatWidget)
+	void CallChat(FString SendTo, FString SendMessage);
 };

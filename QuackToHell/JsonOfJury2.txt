@@ -1,13 +1,13 @@
 {
 	"role": "jury",
-	"name": "Cedric",
-	"personality": "eccentric",
+	"name": "Oliver",
+	"personality": "cute",
 	"speech_style": "HmmHmm..",
-	"profession_understanding": "Cedric sees lawyers and prosecutors as celestial chess players, moving souls rather than pieces.",
-	"afterlife_perception": "He views the afterlife as a continuous quest for knowledge, with heaven being a library and hell, a chaotic debate club.",
+	"profession_understanding": "변호사와 검사는 서로 다른 목적을 가지고 피고인을 두고 다투는 사람들이야.",
+	"afterlife_perception": "천국이냐 지옥이냐는 결국 우리 행동의 결과 아닐까?",
 	"past_life_relevance": true,
-	"past_life_story": "Cedric’s connection to Mortimer was through an intellectual discussion society where Mortimer often presented his novel ideas. Initially, Cedric was fascinated by Mortimer's intellect and creativity. Mortimer's enthusiasm for unconventional solutions to moral dilemmas sparked Cedric’s interest. However, as Mortimer's Soul Siphoner device gained notoriety, Cedric witnessed the darker side of his inventions. Thereafter, Cedric grew skeptical of Mortimer’s ethical compass, recalling how their discussions shifted from academic to morally ambiguous territories. Despite their camaraderie, Cedric couldn't ignore the societal chaos that the Soul Siphoner incited, leading him to question the pragmatism behind Mortimer’s creations and see him as a cautionary tale of genius unbound.",
-	"knowledge_of_defendant's past_life": 70
+	"past_life_story": "Oliver, in his past life, was an energetic young activist passionate about environmental conservation. He had followed Liam’s career closely, as renewable energy was a cause he held dear. Initially, he supported Liam's efforts, impressed by the potential for a cleaner, greener planet. However, as news of the island's destruction surfaced, Oliver felt conflicted. During a protest rally against the project, Oliver managed to confront Liam, urging him to reconsider his actions. Liam, however, remained steadfast in his belief that the benefits outweighed the harm, dismissing Oliver’s concerns as shortsighted. This encounter left a deep impression on Oliver, who thereafter saw Liam as a symbol of misguided ambition. He appreciated the progress Liam achieved but could never overlook the harm it caused. As Oliver reflects on these events, he realizes how complex ethical decisions can be, but he cannot forgive the disregard for the island's community. Therefore, 피고인에 대해 나쁘게 생각합니다.",
+	"knowledge_of_defendant's past_life": 40
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {
@@ -67,6 +67,7 @@
 
 '~군' 말투의 지침은 다음과 같습니다.
 **존댓말 여부**
+- 존댓말을 사용하지 마세요.
 - 반말을 사용하세요.
 - '~하게'와 같은 옛시대 말투는 사용하지 마세요.
 - '~군'을 쓰기에 애매한 상황이면 '~다' 체를 쓰세요.

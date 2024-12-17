@@ -873,6 +873,45 @@
     <ClInclude Include="..\..\Source\QuackToHell\QuackToHellGameMode.h">
       <Filter>Source\QuackToHell</Filter>
     </ClInclude>
+    <Filter Include="Source\QuackToHell\Animation">
+      <UniqueIdentifier>{49DEC6F5-CF30-3500-AF6F-21158A129053}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\QuackToHell\Animation\QPlayerAnimInstance.cpp">
+      <Filter>Source\QuackToHell\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\Animation\QPlayerAnimInstance.h">
+      <Filter>Source\QuackToHell\Animation</Filter>
+    </ClInclude>
+    <Filter Include="Source\QuackToHell\Character">
+      <UniqueIdentifier>{F5CD6C50-25E8-37AE-B83D-353AD6D61A3D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\QuackToHell\Character\QCharacter.cpp">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\Character\QCharacter.h">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\QuackToHell\Character\QLawyer.cpp">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\Character\QLawyer.h">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\QuackToHell\Character\QPlayer.cpp">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\Character\QPlayer.h">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\QuackToHell\Player">
+      <UniqueIdentifier>{D3668E85-E6A2-37F4-AD1B-637F3DE3D527}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\QuackToHell\Player\QPlayerController.cpp">
+      <Filter>Source\QuackToHell\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\Player\QPlayerController.h">
+      <Filter>Source\QuackToHell\Player</Filter>
+    </ClInclude>
     <Filter Include="Source\QuackToHell\Private">
       <UniqueIdentifier>{3C93E03C-2089-3134-8BDA-82D8345C269F}</UniqueIdentifier>
     </Filter>
@@ -897,5 +936,6 @@
     <ClInclude Include="..\..\Source\QuackToHell\Public\QChatUserWidget.h">
       <Filter>Source\QuackToHell\Public</Filter>
     </ClInclude>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

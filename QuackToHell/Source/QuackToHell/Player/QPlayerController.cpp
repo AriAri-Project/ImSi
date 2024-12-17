@@ -97,10 +97,43 @@ void AQPlayerController::Input_Turn(const FInputActionValue& InputValue)
 	}
 }
 
+//e키 눌렀을 때// 
 void AQPlayerController::Input_Talk(const FInputActionValue& InputValue)
 {
 	UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("Lets Talk!"));
+	//if문 서현이 후에 구현: AQNonPlayer라는 클래스 넘겨준다고 생각하고 있기. 
+	if (GameWidgetClass != nullptr) {
+		GameWidget = Cast<UQChatUserWidget>(CreateWidget(GetWorld(), GameWidgetClass));
+		if (GameWidget != nullptr) {
+			GameWidget->AddToViewport();
+			//***임시***//
+			GameWidget->SpeakingNPCTag = "Jury1";
+
+			//태그 구분 부분//AActor로 캐스팅하여 보기
+			//대화중 NPC의 태그를 보고, widget의 태그 세팅을 바꾼다.
+			/*if (NPC->ActorHasTag("Defendant"))
+			{
+				GameWidget->SpeakingNPCTag = "Defendant";
+			}
+			if (NPC->ActorHasTag("Resident"))
+			{
+				GameWidget->SpeakingNPCTag = "Resident";
+			}
+			if (NPC->ActorHasTag("Jury1"))
+			{
+				GameWidget->SpeakingNPCTag = "Jury1";
+			}
+			if (NPC->ActorHasTag("Jury2"))
+			{
+				GameWidget->SpeakingNPCTag = "Jury2";
+			}*/
+		}
+	}
 }
+
+// esc 눌렀을 때// 
+
+
 
 void AQPlayerController::RightMousePressed()
 {
