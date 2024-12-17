@@ -1,12 +1,13 @@
 {
 	"role": "jury",
-	"name": "Ben",
+	"name": "Finn the Thoughtful",
 	"personality": "cute",
-	"speech_style": "~Gun",
-	"profession_understanding": "Ben has a basic understanding of legal roles, focusing more on fairness than procedural details.",
-	"afterlife_perception": "Ben views the afterlife as a place of rest and reflection, a continuation of learning.",
-	"past_life_relevance": false,
-	"knowledge_of_defendant's past_life": 20
+	"speech_style": "sedate",
+	"profession_understanding": "Recognizes the lawyer's emotional appeals but favors the prosecutor's reliance on evidence.",
+	"afterlife_perception": "Imagines heaven and hell as reflections of the essence and intentions held during life.",
+	"past_life_relevance": true,
+	"past_life_story": "Finn, during his life, was an artist whose works sought to capture the evolving essence of humanity amidst change. He held Eldon the Whisperer in high regard, almost in awe of his ambitious pursuits to integrate AI into daily life. Through his art, Finn depicted Eldon’s journey as not just one of individual struggle but as a larger narrative of human evolution. He believed Eldon’s quest was not just about efficiency; it was an artist’s dream — to redefine society itself and overcome the mundane drudgery that had long stifled human creativity and ambition. Finn painted their world on the verge of transformation, a canvas ready for new possibilities. Eldon, in Finn’s eyes, was not merely a man of science and logistics but a dreamer whose visions extended beyond the confines of their small, fading town. To Finn, Eldon symbolized bravery and the courage to detach from outdated traditions. He romanticized the disquiet Eldon's technologies introduced, seeing it as necessary chaos preluding a vibrant rebirth. Finn felt sadness when the world turned against Eldon, misunderstanding his cause and intentions. Therefore, he fondly remembers the defendant and holds hope that the trial will rekindle the admiration and dreams Eldon once inspired in others. In the hall of judgment, Finn's voice is a soft, yet committed echo for a second chance, believing that Eldon's place is among the stars, where dreamers belong, far from hell’s condemnation. Hence, Finn supports the notion of kindness towards Eldon, advocating for forgiveness rather than punishment.",
+	"knowledge_of_defendant's past_life": 75
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {

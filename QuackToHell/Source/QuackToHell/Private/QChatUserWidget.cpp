@@ -4,7 +4,7 @@
 #include "QChatUserWidget.h"
 
 //채팅 in widget//
-//트리거조건: enter버튼 누르면.
+//트리거조건: Send버튼 누르면.
 void UQChatUserWidget::CallChat(FString SendTo, FString SendMessage)
 {
     /*

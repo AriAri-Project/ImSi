@@ -124,26 +124,7 @@ void AQPlayerController::Input_Talk(const FInputActionValue& InputValue)
 		if (GameWidget != nullptr) {
 			GameWidget->AddToViewport();
 			//***�ӽ�***//
-			GameWidget->SpeakingNPCTag = "Jury1";
-
-			//�±� ���� �κ�//AActor�� ĳ�����Ͽ� ����
-			//��ȭ�� NPC�� �±׸� ����, widget�� �±� ������ �ٲ۴�.
-			/*if (NPC->ActorHasTag("Defendant"))
-			{
-				GameWidget->SpeakingNPCTag = "Defendant";
-			}
-			if (NPC->ActorHasTag("Resident"))
-			{
-				GameWidget->SpeakingNPCTag = "Resident";
-			}
-			if (NPC->ActorHasTag("Jury1"))
-			{
-				GameWidget->SpeakingNPCTag = "Jury1";
-			}
-			if (NPC->ActorHasTag("Jury2"))
-			{
-				GameWidget->SpeakingNPCTag = "Jury2";
-			}*/
+			GameWidget->SpeakingNPCTag = CurrentTalkingNPC->Tags[0].ToString();
 		}
 	}
 }
@@ -160,6 +141,9 @@ void AQPlayerController::Input_EndTalk(const FInputActionValue& InputValue)
 	PlayerCharacter->SetIsTalking(false);
 	CurrentTalkingNPC->bIsTalking = false;
 	CurrentTalkingNPC->bIsTalkable = true;
+
+	//widget 사라지게
+	GameWidget->RemoveFromParent();
 }
 
 void AQPlayerController::RightMousePressed()

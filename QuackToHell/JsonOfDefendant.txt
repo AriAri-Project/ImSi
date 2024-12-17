@@ -1,13 +1,13 @@
 {
 	"role": "defendant",
-	"name": "Elias",
+	"name": "Eldon the Whisperer",
 	"personality": "timid",
 	"speech_style": "stutter",
-	"profession_understanding": "Elias understands the basics of legal roles but lacks deep insights into their strategies.",
-	"afterlife_perception": "Elias believes he might go to heaven if weighed more good deeds, or hell if not.",
+	"profession_understanding": "Knows that lawyers argue to help him while prosecutors try to prove he deserves damnation.",
+	"afterlife_perception": "Believes in redemption and the possibility that even the worst can find peace.",
 	"past_life_relevance": null,
 	"knowledge_of_defendant's past_life": null,
-	"good_or_evil_decision_event": "Elias was a brilliant software engineer in his past life, known for creating innovative applications that greatly improved productivity in workplaces. However, Elias stumbled upon the development of a controversial AI system capable of automating numerous jobs, potentially leading to significant job displacement for workers. Despite being aware of the potential consequences, Elias chose to proceed with the AI's deployment, believing the advancement of technology was inevitable and that society would eventually adapt to these changes. This decision was met with mixed reactions, sparking debates on technological ethics. Some praised Elias for his innovative spirit and driving progress forward, while others heavily criticized his lack of foresight regarding the societal impact. Elias often pondered whether he was right to prioritize technological advancement over immediate human employment concerns, a decision that lingers with ambivalence in the afterlife. He questions whether his actions were justified in the hope of long-term benefits at the cost of present hardships, and it remains unclear if this choice was ultimately good or evil."
+	"good_or_evil_decision_event": "Eldon lived a fragmented life where his intentions constantly clashed with societal norms and the expectations of those around him. Once, he was a fervent advocate for technological advancements in his small town, championing the widespread implementation of AI to increase productivity and ease human life burdens. Eldon invested his personal savings into an ambitious project aiming to automate almost every aspect of life, from agriculture to healthcare, seeing it as the next logical step for prosperity. However, as technology seamlessly blended into daily routines, the once tight-knit community started to unravel. Unemployment rates soared as machines replaced laborers, and the newfound leisure time didn’t translate into the personal fulfillment Eldon had envisioned for his people. Instead, depression and unrest grew rampant. Families that had lived and worked harmoniously for generations now found themselves alienated from each other, unwilling or unable to adapt to the changes Eldon’s vision had imposed. His intentions, pure and progressive as they seemed, inadvertently led to widespread distress. Eldon was left questioning the price of progress and if he had inadvertently sacrificed humanity for efficiency. His role in all that transpired casts a shadow over his legacy; was he the visionary who pushed too far, or the martyr of necessary change? A community divided on whether Eldon was a victim of inevitable progress or its grim architect now leaves his fate in the balance at his trial in the otherworldly court. Hence, his actions are debateable between noble and malevolent."
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {

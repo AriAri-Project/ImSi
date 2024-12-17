@@ -1,5 +1,39 @@
 {
 	"RemapUnityFiles": 
 	{
+		"Module.QuackToHell.cpp.obj": [
+			"MyGameModeTest.gen.cpp.obj",
+			"QCharacter.gen.cpp.obj",
+			"QChatGameMode.gen.cpp.obj",
+			"QChatUserWidget.gen.cpp.obj",
+			"QDefendant.gen.cpp.obj",
+			"QLawyer.gen.cpp.obj",
+			"QNonPlayer.gen.cpp.obj",
+			"QNPCController.gen.cpp.obj",
+			"QPlayer.gen.cpp.obj",
+			"QPlayerAnimInstance.gen.cpp.obj",
+			"QPlayerController.gen.cpp.obj",
+			"QRecorderUserWidget.gen.cpp.obj",
+			"QResident.gen.cpp.obj",
+			"QuackToHellCharacter.gen.cpp.obj",
+			"QuackToHellGameMode.gen.cpp.obj",
+			"QPlayerAnimInstance.cpp.obj",
+			"QCharacter.cpp.obj",
+			"QDefendant.cpp.obj",
+			"QLawyer.cpp.obj",
+			"QNonPlayer.cpp.obj",
+			"QPlayer.cpp.obj",
+			"QResident.cpp.obj",
+			"QNPCController.cpp.obj",
+			"MyGameModeTest.cpp.obj",
+			"QChatGameMode.cpp.obj",
+			"QRecorderUserWidget.cpp.obj",
+			"QuackToHell.cpp.obj",
+			"QuackToHellCharacter.cpp.obj",
+			"QuackToHellGameMode.cpp.obj",
+			"QuackToHell.init.gen.cpp.obj",
+			"QPlayerController.cpp.obj",
+			"QChatUserWidget.cpp.obj"
+		]
 	}
 }

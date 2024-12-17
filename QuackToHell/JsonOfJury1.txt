@@ -1,13 +1,13 @@
 {
 	"role": "jury",
-	"name": "Martha",
+	"name": "Gerda the Stern",
 	"personality": "eccentric",
-	"speech_style": "sedate",
-	"profession_understanding": "Martha has a comprehensive understanding of the trial process, keenly aware of both the prosecutor's and lawyer's tactics.",
-	"afterlife_perception": "Martha perceives the afterlife as a realm where one's balance of deeds determines their fate.",
+	"speech_style": "HmmHmm..",
+	"profession_understanding": "Understands the lawyer's abilities to twist narratives but respects the prosecutor’s factual storytelling.",
+	"afterlife_perception": "Sees the world in black and white and believes that purgatory is where souls are truly judged without bias before entering heaven or hell.",
 	"past_life_relevance": true,
-	"past_life_story": "In Elias’s past life, he was well-regarded for his intelligence and ambition. However, Martha witnessed an event that changed her view dramatically. Elias had been involved in a charity project, seemingly out of goodwill to help underprivileged children with educational resources. Martha volunteered here, inspired initially by Elias's apparent generosity. Over time, she realized the project was more about enhancing Elias's reputation than genuinely aiding the children. Funds intended for educational materials often diverted into marketing campaigns showcasing Elias as a benevolent figure, with little actual impact reaching those in need. The children were often used in promotional photos to project an image of a savior-like persona for Elias, causing Martha to feel disgusted by the manipulation. This experience left her with a deep-seated dislike for Elias, whom she considered manipulative and self-serving. \"Therefore, I think of the defendant quite unfavorably,\" Martha says, acknowledging how such hypocrisy shaped her negative perception of him in the afterlife.",
-	"knowledge_of_defendant's past_life": 75
+	"past_life_story": "Before the veil of death fell upon her, Gerda was a formidable arbiter in her own right—a judge who condemned many but always stood by her belief in absolute justice. Her life was a testament to righteousness, or so she thought, until she met Eldon the Whisperer. Eldon's case was unlike any other she had encountered: his seemingly altruistic resolve hid catastrophic outcomes beneath layers of ethical quandaries. In her mortal coil, Gerda had judged Eldon harshly, believing fervently in the purity of moral binaries. His actions, in her eyes, were a gross deviation from the path of righteousness, and thus his soul was marked for severe condemnation. She perceived his technological pursuits as reckless endangerment of humanity, calling them anathema to the natural order that upheld societal harmony. Any act that upset the balance was, by her doctrine, a transgression, irrespective of the intentions behind them. Gerda's disgust metamorphosed into something extremely personal. She resented Eldon not for his failure, but for his arrogance in assuming the mantle of progress without considering the toll it took on human emotion and societal cohesion. Therefore, she thinks ill of the defendant and will vehemently oppose any defense by the lawyers that try to paint him as a misunderstood visionary. Her stance is unwavering—Eldon is a reminder of how noble intentions can be the guises of profound folly—and she carries this bias into the spectral courtroom, where her voice may tip the scales of the afterlife.",
+	"knowledge_of_defendant's past_life": 80
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {

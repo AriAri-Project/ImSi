@@ -891,10 +891,22 @@
     <ClInclude Include="..\..\Source\QuackToHell\Character\QCharacter.h">
       <Filter>Source\QuackToHell\Character</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\QuackToHell\Character\QDefendant.cpp">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\Character\QDefendant.h">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\QuackToHell\Character\QLawyer.cpp">
       <Filter>Source\QuackToHell\Character</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\QuackToHell\Character\QLawyer.h">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\QuackToHell\Character\QNonPlayer.cpp">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\Character\QNonPlayer.h">
       <Filter>Source\QuackToHell\Character</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\QuackToHell\Character\QPlayer.cpp">
@@ -902,6 +914,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\QuackToHell\Character\QPlayer.h">
       <Filter>Source\QuackToHell\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\QuackToHell\Character\QResident.cpp">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\Character\QResident.h">
+      <Filter>Source\QuackToHell\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\QuackToHell\NPC">
+      <UniqueIdentifier>{6C1BCDA2-7D5D-361E-9B2C-540AD17DF666}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\QuackToHell\NPC\QNPCController.cpp">
+      <Filter>Source\QuackToHell\NPC</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\QuackToHell\NPC\QNPCController.h">
+      <Filter>Source\QuackToHell\NPC</Filter>
     </ClInclude>
     <Filter Include="Source\QuackToHell\Player">
       <UniqueIdentifier>{D3668E85-E6A2-37F4-AD1B-637F3DE3D527}</UniqueIdentifier>
