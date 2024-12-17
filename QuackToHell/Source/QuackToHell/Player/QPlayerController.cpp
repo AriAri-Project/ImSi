@@ -117,6 +117,7 @@ void AQPlayerController::Input_Talk(const FInputActionValue& InputValue)
 	PlayerCharacter->SetIsTalking(true);
 	CurrentTalkingNPC->bIsTalking = true;
 	CurrentTalkingNPC->bIsTalkable = false;
+	
 	UE_LOG(LogTemp, Log, TEXT("%s"), TEXT("Lets Talk!"));
 	//if�� ������ �Ŀ� ����: AQNonPlayer��� Ŭ���� �Ѱ��شٰ� �����ϰ� �ֱ�. 
 	if (GameWidgetClass != nullptr) {

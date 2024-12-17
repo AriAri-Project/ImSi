@@ -10,7 +10,7 @@
  * 
  */
 
-UCLASS()
+UCLASS(Blueprintable)
 class QUACKTOHELL_API AQNonPlayer : public AQCharacter
 {
 	GENERATED_BODY()
@@ -43,6 +43,9 @@ public:
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "NPC Information")
 	FString CurrentReply;
 
+	UFUNCTION(Blueprintable)
+	bool GetIsTalking();
+	
 	UFUNCTION()
 	void ActivateOutline();
 

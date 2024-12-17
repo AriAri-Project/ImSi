@@ -11,7 +11,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class QUACKTOHELL_API AQPlayer : public AQCharacter
 {
 	GENERATED_BODY()
