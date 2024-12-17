@@ -8,11 +8,14 @@
 #include "InputMappingContext.h"
 #include "InputAction.h"
 #include "GameFramework/PlayerController.h"
+#include <QChatUserWidget.h>
+
 #include "QPlayerController.generated.h"
 
 /**
  * 
  */
+
 UCLASS()
 class QUACKTOHELL_API AQPlayerController : public APlayerController
 {
@@ -46,4 +49,14 @@ private:
 
 	void RightMousePressed();
 	void RightMouseReleased();
+
+//위젯띄우기//
+protected:
+	//TODO - Implement Widget Variables
+	UPROPERTY(EditAnywhere, Category = "Widgets")
+	//블루프린트 에디터의 디테일 패널에서 GameWidgetClass에 위젯 블루프린트를 할당(TSubclassOf<UUserWidget> 타입은 UUserWidget을 상속받는 클래스를 저장할 수 있습니다.)
+	//TSubclassOf<class UUserWidget>는 UUserWidget을 상속받는 클래스 타입만 저장할 수 있는 안전한 포인터
+	TSubclassOf<class UUserWidget> GameWidgetClass;
+	UPROPERTY()
+	UQChatUserWidget* GameWidget;
 };

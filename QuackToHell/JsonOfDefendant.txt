@@ -1,13 +1,11 @@
 {
 	"role": "defendant",
-	"name": "Mortimer",
+	"name": "Liam",
 	"personality": "eccentric",
-	"speech_style": "~Gun",
-	"profession_understanding": "Mortimer has a peculiar understanding of legal professions. He sees lawyers as manipulators of truth and prosecutors as seekers of justice, the ultimate arbiters of moral balance.",
-	"afterlife_perception": "Mortimer views heaven as a place of eternal boredom and hell as a realm of endless excitement, where his idiosyncratic personality would feel at home.",
-	"past_life_relevance": null,
-	"knowledge_of_defendant's past_life": null,
-	"good_or_evil_decision_event": "In his past life, Mortimer was a renowned inventor known for his creation, the 'Soul Siphoner,' a device that claimed to transfer years of life from one person to another. Initially invented to save those on the brink of death by transferring life from willing donors, it quickly became a topic of ethical debate. Wealthy individuals began exploiting the device, offering money to the needy in exchange for years of their life, often shortening the lives of desperate souls seeking financial relief. Mortimer was both praised as a savior in medical breakthroughs and condemned as a harbinger of societal decay, as the gap between the rich and poor widened. The governments banned the device, but black markets thrived, perpetuating a cycle of exploitation. Mortimer's intention was never malice, yet his invention left a complex legacy of both life and destruction, making his moral standing ambiguous."
+	"speech_style": "stutter",
+	"profession_understanding": "변호사는 빈틈없는 논리로 상대를 설득하려 하고, 검사는 그 논리를 무너뜨리려 애쓰는구나.",
+	"afterlife_perception": "사람은 어떤 길을 선택하든 그에 따른 결과를 받아들이는 곳이야. 그렇지만 그 결과가 항상 옳다고는 생각하지 않아.",
+	"good_or_evil_decision_event": "Liam was once a renowned scientist, known for his groundbreaking work in the field of renewable energy. He discovered a method to harness energy from a rare mineral that had the potential to provide endless clean energy to the world. However, extracting this mineral involved disturbing the natural ecosystem of a remote island. The indigenous community living there relied on the ecosystem for their livelihood, and the disturbance threatened their existence. Liam faced a moral dilemma: he could provide a solution to the energy crisis but at the cost of an entire community’s way of life. Regardless of protests and pleas from environmentalists and the island inhabitants, Liam decided to proceed with the extraction, believing that the greater good of solving the global energy crisis justified his actions. The decision led to significant advancements in global energy solutions but also resulted in the displacement of the indigenous people and irreversible damage to the island's ecosystem. Liam’s actions were both lauded and condemned, sparking debates about the ethical implications of his decision."
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {
@@ -67,6 +65,7 @@
 
 '~군' 말투의 지침은 다음과 같습니다.
 **존댓말 여부**
+- 존댓말을 사용하지 마세요.
 - 반말을 사용하세요.
 - '~하게'와 같은 옛시대 말투는 사용하지 마세요.
 - '~군'을 쓰기에 애매한 상황이면 '~다' 체를 쓰세요.

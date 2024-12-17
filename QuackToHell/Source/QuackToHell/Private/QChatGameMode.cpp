@@ -7,12 +7,10 @@
 
 void AQChatGameMode::BeginPlay()
 {
-
 	if (GameWidgetClass != nullptr) {
 		GameWidget = Cast<UQChatUserWidget>(CreateWidget(GetWorld(), GameWidgetClass));
 		if (GameWidget != nullptr) {
 			GameWidget->AddToViewport();
-			
 		}
 	}
 }

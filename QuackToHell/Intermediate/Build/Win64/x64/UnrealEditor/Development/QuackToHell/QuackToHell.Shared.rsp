@@ -283,6 +283,7 @@
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationEditMode\UHT"
 /I "Editor\AnimationEditMode\Public"
 /I "C:\Users\swu\Documents\Unreal Projects\QuackToHell_OriginalRepo\QuackToHell\QuackToHell\Intermediate\Build\Win64\UnrealEditor\Inc\QuackToHell\UHT"
+/I "C:\Users\swu\Documents\Unreal Projects\QuackToHell_OriginalRepo\QuackToHell\QuackToHell\Source\QuackToHell"
 /I "C:\Users\swu\Documents\Unreal Projects\QuackToHell_OriginalRepo\QuackToHell\QuackToHell\Source"
 /I "C:\Users\swu\Documents\Unreal Projects\QuackToHell_OriginalRepo\QuackToHell\QuackToHell\Source\QuackToHell\Public"
 /I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"

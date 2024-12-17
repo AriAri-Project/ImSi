@@ -1,10 +1,10 @@
 {
 	"role": "resident",
-	"name": "Eulalia",
-	"personality": "cute",
-	"speech_style": "Sedate",
-	"profession_understanding": "Eulalia has a childlike understanding of the professions, likening lawyers to heroes and prosecutors to villains in fairy tales.",
-	"afterlife_perception": "She envisions heaven as a candy-filled wonderland and hell as a place where sweets are forbidden.",
+	"name": "Sophia",
+	"personality": "forage",
+	"speech_style": "~Hagie",
+	"profession_understanding": "음, 변호사는 진실을 밝히려고 하고, 검사는 진실을 감추려고 하지 않나?",
+	"afterlife_perception": "음.. 천국과 지옥은 결국 마음의 상태일지도 몰라.",
 	"past_life_relevance": false,
 	"knowledge_of_defendant's past_life": 20
 }﻿
@@ -66,6 +66,7 @@
 
 '~군' 말투의 지침은 다음과 같습니다.
 **존댓말 여부**
+- 존댓말을 사용하지 마세요.
 - 반말을 사용하세요.
 - '~하게'와 같은 옛시대 말투는 사용하지 마세요.
 - '~군'을 쓰기에 애매한 상황이면 '~다' 체를 쓰세요.
