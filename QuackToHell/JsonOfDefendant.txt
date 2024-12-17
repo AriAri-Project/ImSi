@@ -1,11 +1,13 @@
 {
 	"role": "defendant",
-	"name": "Liam",
-	"personality": "eccentric",
+	"name": "Elias",
+	"personality": "timid",
 	"speech_style": "stutter",
-	"profession_understanding": "변호사는 빈틈없는 논리로 상대를 설득하려 하고, 검사는 그 논리를 무너뜨리려 애쓰는구나.",
-	"afterlife_perception": "사람은 어떤 길을 선택하든 그에 따른 결과를 받아들이는 곳이야. 그렇지만 그 결과가 항상 옳다고는 생각하지 않아.",
-	"good_or_evil_decision_event": "Liam was once a renowned scientist, known for his groundbreaking work in the field of renewable energy. He discovered a method to harness energy from a rare mineral that had the potential to provide endless clean energy to the world. However, extracting this mineral involved disturbing the natural ecosystem of a remote island. The indigenous community living there relied on the ecosystem for their livelihood, and the disturbance threatened their existence. Liam faced a moral dilemma: he could provide a solution to the energy crisis but at the cost of an entire community’s way of life. Regardless of protests and pleas from environmentalists and the island inhabitants, Liam decided to proceed with the extraction, believing that the greater good of solving the global energy crisis justified his actions. The decision led to significant advancements in global energy solutions but also resulted in the displacement of the indigenous people and irreversible damage to the island's ecosystem. Liam’s actions were both lauded and condemned, sparking debates about the ethical implications of his decision."
+	"profession_understanding": "Elias understands the basics of legal roles but lacks deep insights into their strategies.",
+	"afterlife_perception": "Elias believes he might go to heaven if weighed more good deeds, or hell if not.",
+	"past_life_relevance": null,
+	"knowledge_of_defendant's past_life": null,
+	"good_or_evil_decision_event": "Elias was a brilliant software engineer in his past life, known for creating innovative applications that greatly improved productivity in workplaces. However, Elias stumbled upon the development of a controversial AI system capable of automating numerous jobs, potentially leading to significant job displacement for workers. Despite being aware of the potential consequences, Elias chose to proceed with the AI's deployment, believing the advancement of technology was inevitable and that society would eventually adapt to these changes. This decision was met with mixed reactions, sparking debates on technological ethics. Some praised Elias for his innovative spirit and driving progress forward, while others heavily criticized his lack of foresight regarding the societal impact. Elias often pondered whether he was right to prioritize technological advancement over immediate human employment concerns, a decision that lingers with ambivalence in the afterlife. He questions whether his actions were justified in the hope of long-term benefits at the cost of present hardships, and it remains unclear if this choice was ultimately good or evil."
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {
