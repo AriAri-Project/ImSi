@@ -42,4 +42,10 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "NPC Information")
 	FString CurrentReply;
+
+	UFUNCTION()
+	void ActivateOutline();
+
+	UFUNCTION()
+	void DeactivateOutline();
 };

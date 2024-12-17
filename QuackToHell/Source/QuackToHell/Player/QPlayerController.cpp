@@ -95,7 +95,7 @@ void AQPlayerController::Input_Turn(const FInputActionValue& InputValue)
 	}
 }
 
-//eŰ ������ ��// 
+//E가 눌리면 이벤트 발생 
 void AQPlayerController::Input_Talk(const FInputActionValue& InputValue)
 {
 	// Player로부터 현재 대화가능한 NPC TArray받아옴.
