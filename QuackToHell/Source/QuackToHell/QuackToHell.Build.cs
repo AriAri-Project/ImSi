@@ -8,6 +8,6 @@ public class QuackToHell : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PublicIncludePaths.AddRange(new string[] { "QuackToHell" });
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput","OpenAI" });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput","OpenAI", "NavigationSystem", "AIModule" });
 	}
 }
