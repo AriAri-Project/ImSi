@@ -2,6 +2,7 @@
 
 
 #include "QCharacter.h"
+#include "Components/SkeletalMeshComponent.h"
 
 // Sets default values
 AQCharacter::AQCharacter()

@@ -65,6 +65,7 @@ void AQPlayer::OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, AActor*
 	if (NonPlayer == nullptr) return;
 	if (!(NonPlayer->bIsTalkable) || NonPlayer->bIsTalking) return;
 	TalkableNPCs.Add(NonPlayer);
+	NonPlayer->ActivateOutline();
 	
 	// 디버깅 로그
 	UE_LOG(LogTemp, Display, TEXT("AQPlayer::OnOverlapBegin %s"), *NonPlayer->GetName());
@@ -83,6 +84,7 @@ void AQPlayer::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, AActor* O
 	
 	UE_LOG(LogTemp, Display, TEXT("AQPlayer::OnOverlapEnd %s"), *NonPlayer->GetName());
 	NonPlayer->bIsTalking = false;
+	NonPlayer->DeactivateOutline();
 	TalkableNPCs.Remove(Cast<AQNonPlayer>(NonPlayer));
 
 	// 디버깅 로그
