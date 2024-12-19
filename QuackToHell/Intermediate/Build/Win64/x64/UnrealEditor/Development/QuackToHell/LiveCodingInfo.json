@@ -25,15 +25,15 @@
 			"QPlayer.cpp.obj",
 			"QResident.cpp.obj",
 			"QNPCController.cpp.obj",
+			"QPlayerController.cpp.obj",
 			"MyGameModeTest.cpp.obj",
 			"QChatGameMode.cpp.obj",
+			"QChatUserWidget.cpp.obj",
 			"QRecorderUserWidget.cpp.obj",
 			"QuackToHell.cpp.obj",
 			"QuackToHellCharacter.cpp.obj",
 			"QuackToHellGameMode.cpp.obj",
-			"QuackToHell.init.gen.cpp.obj",
-			"QPlayerController.cpp.obj",
-			"QChatUserWidget.cpp.obj"
+			"QuackToHell.init.gen.cpp.obj"
 		]
 	}
 }

@@ -1,10 +1,10 @@
 {
 	"role": "resident",
-	"name": "Lila the Observer",
+	"name": "Lars",
 	"personality": "forage",
 	"speech_style": "~Gun",
-	"profession_understanding": "Doesn't care much about the technicalities but enjoys the courtroom drama.",
-	"afterlife_perception": "Believes that both heaven and hell are exaggerated concepts, existing more as states of mind.",
+	"profession_understanding": "Legal cobwebs and entanglements.",
+	"afterlife_perception": "Final destinations, separate and definitive.",
 	"past_life_relevance": false,
 	"knowledge_of_defendant's past_life": 20
 }﻿

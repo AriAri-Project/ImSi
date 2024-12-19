@@ -1,13 +1,13 @@
 {
 	"role": "defendant",
-	"name": "Eldon the Whisperer",
+	"name": "Frida",
 	"personality": "timid",
 	"speech_style": "stutter",
-	"profession_understanding": "Knows that lawyers argue to help him while prosecutors try to prove he deserves damnation.",
-	"afterlife_perception": "Believes in redemption and the possibility that even the worst can find peace.",
+	"profession_understanding": "Lawyers persuade; prosecutors convict.",
+	"afterlife_perception": "Heaven is serenity, hell is chaos.",
 	"past_life_relevance": null,
 	"knowledge_of_defendant's past_life": null,
-	"good_or_evil_decision_event": "Eldon lived a fragmented life where his intentions constantly clashed with societal norms and the expectations of those around him. Once, he was a fervent advocate for technological advancements in his small town, championing the widespread implementation of AI to increase productivity and ease human life burdens. Eldon invested his personal savings into an ambitious project aiming to automate almost every aspect of life, from agriculture to healthcare, seeing it as the next logical step for prosperity. However, as technology seamlessly blended into daily routines, the once tight-knit community started to unravel. Unemployment rates soared as machines replaced laborers, and the newfound leisure time didn’t translate into the personal fulfillment Eldon had envisioned for his people. Instead, depression and unrest grew rampant. Families that had lived and worked harmoniously for generations now found themselves alienated from each other, unwilling or unable to adapt to the changes Eldon’s vision had imposed. His intentions, pure and progressive as they seemed, inadvertently led to widespread distress. Eldon was left questioning the price of progress and if he had inadvertently sacrificed humanity for efficiency. His role in all that transpired casts a shadow over his legacy; was he the visionary who pushed too far, or the martyr of necessary change? A community divided on whether Eldon was a victim of inevitable progress or its grim architect now leaves his fate in the balance at his trial in the otherworldly court. Hence, his actions are debateable between noble and malevolent."
+	"good_or_evil_decision_event": "Frida was once a scientist passionate about discovering new energy sources. One day, she found a way to harness energy from the very core of living beings. Frida believed this could solve the world’s energy crisis. However, extracting this energy meant the demise of countless microorganisms essential for ecological balance. Frida faced a dilemma: proceed with the potentially groundbreaking research or halt to preserve these lifeforms. Weighing the potential benefits against the irreversible ecological damage caused her great distress. Ultimately, she decided to publish her findings, hoping that someone more ethically aligned could find a way to harness the technology without devastation. The world was split in two about her actions; some heralded her as a visionary, while others condemned her disregard for life."
 }﻿
 **위의 Json Schema의 각 필드에 대한 설명**:
 {
