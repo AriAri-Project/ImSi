@@ -73,6 +73,29 @@ void AQuackToHellGameMode::PrintChatHistory(FString Tag) {
     }
 }
 
+void AQuackToHellGameMode::PreLogin(const FString& Options, const FString& Address, const FUniqueNetIdRepl& UniqueId,
+    FString& ErrorMessage)
+{
+    Super::PreLogin(Options, Address, UniqueId, ErrorMessage);
+}
+
+APlayerController* AQuackToHellGameMode::Login(UPlayer* NewPlayer, ENetRole InRemoteRole, const FString& Portal,
+    const FString& Options, const FUniqueNetIdRepl& UniqueId, FString& ErrorMessage)
+{
+    APlayerController* NewPlayerController = Super::Login(NewPlayer, InRemoteRole, Portal, Options, UniqueId, ErrorMessage);
+    return NewPlayerController;
+}
+
+void AQuackToHellGameMode::PostLogin(APlayerController* NewPlayer)
+{
+    Super::PostLogin(NewPlayer);
+}
+
+void AQuackToHellGameMode::StartPlay()
+{
+    Super::StartPlay();
+}
+
 
 AQuackToHellGameMode::AQuackToHellGameMode()
 {
